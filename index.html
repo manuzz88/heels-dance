@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<script>
+document.documentElement.classList.add('js');
+/* Preload dei font critici (solo in hosting http/https: sul protocollo file:// Chrome rifiuta i preload con crossorigin). */
+if (/^https?:$/.test(location.protocol)) {
+  ['assets/fonts/bodoni-moda-roman-latin.woff2', 'assets/fonts/bodoni-moda-italic-latin.woff2', 'assets/fonts/inter-tight-roman-latin.woff2'].forEach(function (href) {
+    var l = document.createElement('link'); l.rel = 'preload'; l.as = 'font'; l.type = 'font/woff2'; l.crossOrigin = 'anonymous'; l.href = href; document.head.appendChild(l);
+  });
+}
+</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Heels dance a Brera, Milano · Lezioni con Kristina</title>
+<meta name="description" content="Lezioni di heels dance a Milano, zona Brera: postura, camminata, floorwork e coreografia sui tacchi. Anche per chi parte da zero. Prenota su WhatsApp.">
+<meta name="theme-color" content="#F3EFE7">
+<meta name="color-scheme" content="light">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-512.png" sizes="512x512" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="stylesheet" href="styles.css">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Kristina · Heels dance · Brera">
+<meta property="og:title" content="Sui tacchi, con carattere. Heels dance a Brera, Milano">
+<meta property="og:description" content="Lezioni di heels dance con Kristina a Milano, zona Brera. Tecnica. Presenza. Musicalità. Anche per chi parte da zero. Prenota su WhatsApp.">
+<meta property="og:locale" content="it_IT">
+<meta property="og:locale:alternate" content="en_GB">
+<meta property="og:locale:alternate" content="ru_RU">
+<!-- CONFIG: og:url e og:image (assoluti) vengono aggiunti da script.js quando CONFIG.site.url è compilato.
+     I crawler non eseguono JavaScript: prima del lancio incollare qui i valori definitivi, es.
+     <meta property="og:url" content="https://DOMINIO/"> <meta property="og:image" content="https://DOMINIO/og-image.png">
+     <meta property="og:image:width" content="1200"> <meta property="og:image:height" content="630">
+     <meta name="twitter:card" content="summary_large_image"> <meta name="twitter:image" content="https://DOMINIO/og-image.png">
+     <link rel="canonical" href="https://DOMINIO/"> -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Sui tacchi, con carattere. Heels dance a Brera, Milano">
+<meta name="twitter:description" content="Lezioni di heels dance con Kristina a Milano, zona Brera. Tecnica. Presenza. Musicalità. Anche per chi parte da zero. Prenota su WhatsApp.">
+<script type="application/ld+json" id="jsonld">
+{"@context":"https://schema.org","@graph":[
+ {"@type":"Person","@id":"#kristina","name":"Kristina","jobTitle":"Insegnante di heels dance","knowsLanguage":["it","en","ru"],"address":{"@type":"PostalAddress","addressLocality":"Milano","addressRegion":"MI","addressCountry":"IT"}},
+ {"@type":"DanceSchool","@id":"#scuola","name":"Kristina · Heels dance · Brera","description":"Lezioni di heels dance a Milano, zona Brera: postura, camminata, floorwork e coreografia sui tacchi. Anche per chi parte da zero.","founder":{"@id":"#kristina"},"address":{"@type":"PostalAddress","addressLocality":"Milano","addressRegion":"MI","addressCountry":"IT"},"areaServed":"Milano","knowsLanguage":["it","en","ru"]}
+]}
+</script>
+<script src="script.js" defer></script>
+</head>
+<body id="top">
+<a class="skip" href="#main" data-i18n="ui.skip_link">Vai al contenuto</a>
+
+<!-- Sprite: icone ripetute (WhatsApp, freccia →) definite una volta e richiamate con <use> -->
+<svg aria-hidden="true" focusable="false" style="position:absolute;width:0;height:0;overflow:hidden">
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.885-9.885 9.885m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 16 16"><path d="M2 8h11M9 3.5 13.5 8 9 12.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+</svg>
+
+<!-- La cucitura: la linea che accompagna lo scroll (§9.1) -->
+<div class="seam" aria-hidden="true">
+  <span class="seam__guide"></span>
+  <span class="seam__trace"></span>
+  <span class="seam__dot"></span>
+</div>
+
+<header class="header" id="header">
+  <div class="container header__in">
+    <a class="header__brand" href="#top" aria-label="Kristina · Torna su" data-brand-label>
+      <svg class="monogram" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+        <rect x="14" y="8" width="7" height="48" fill="currentColor"/>
+        <path d="M21 34 L46 8" stroke="currentColor" stroke-width="1.6" fill="none"/>
+        <path d="M21 30 L29 27 L49 55.5 L47.5 56.5 Z" fill="currentColor"/>
+        <circle class="monogram__dot" cx="48.5" cy="57" r="3"/>
+      </svg>
+    </a>
+    <nav class="nav" aria-label="Menu principale" data-i18n-attr="aria-label:ui.nav_main">
+      <ul class="nav__list" id="nav-list" role="list">
+        <li><a class="nav__link" href="#lezioni"><span class="nav__n" aria-hidden="true" data-nav-n="lezioni">02</span><span data-i18n="nav.classes">Lezioni</span></a></li>
+        <li><a class="nav__link" href="#prima-volta"><span class="nav__n" aria-hidden="true" data-nav-n="prima-volta">03</span><span data-i18n="nav.first_class">Prima volta</span></a></li>
+        <li><a class="nav__link" href="#kristina"><span class="nav__n" aria-hidden="true" data-nav-n="kristina">04</span><span data-i18n="nav.about">Kristina</span></a></li>
+        <li><a class="nav__link" href="#orari"><span class="nav__n" aria-hidden="true" data-nav-n="orari">05</span><span data-i18n="nav.schedule">Orari</span></a></li>
+        <li><a class="nav__link" href="#prezzi"><span class="nav__n" aria-hidden="true" data-nav-n="prezzi">06</span><span data-i18n="nav.pricing">Prezzi</span></a></li>
+        <li><a class="nav__link" href="#dove"><span class="nav__n" aria-hidden="true" data-nav-n="dove">07</span><span data-i18n="nav.location">Dove</span></a></li>
+        <li><a class="nav__link" href="#domande"><span class="nav__n" aria-hidden="true" data-nav-n="domande">08</span><span data-i18n="nav.faq">Domande</span></a></li>
+        <li class="nav__ink-holder" aria-hidden="true"><span class="nav__ink"></span></li>
+      </ul>
+    </nav>
+    <div class="header__tools">
+      <div class="lang" role="group" aria-label="Lingua" data-i18n-attr="aria-label:ui.lang_switch_label">
+        <button type="button" class="lang__btn" data-lang="it" lang="it" aria-pressed="true" aria-label="Italiano">IT</button>
+        <span class="lang__sep" aria-hidden="true"></span>
+        <button type="button" class="lang__btn" data-lang="en" lang="en" aria-pressed="false" aria-label="English">EN</button>
+        <span class="lang__sep" aria-hidden="true"></span>
+        <button type="button" class="lang__btn" data-lang="ru" lang="ru" aria-pressed="false" aria-label="Русский">RU</button>
+        <span class="lang__ink" aria-hidden="true"></span>
+      </div>
+      <a class="btn btn--secondary btn--header" href="#prenota"><span class="btn__label" data-i18n="nav.book">Prenota</span></a>
+      <button type="button" class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="menu" aria-label="Menu" data-i18n-attr="aria-label:ui.menu_open">
+        <span class="menu-btn__icon" aria-hidden="true"></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Menu mobile (senza JavaScript è un elenco visibile sotto l'header) -->
+<div id="menu" class="menu">
+  <div class="container menu__in">
+    <button type="button" class="menu__close" id="menu-close" aria-label="Chiudi" data-i18n-attr="aria-label:ui.menu_close">
+      <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path d="M4 4 L20 20 M20 4 L4 20" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>
+    </button>
+    <nav>
+      <ol class="menu__list" role="list">
+        <li><a class="menu__link" href="#lezioni"><span class="menu__n" aria-hidden="true" data-nav-n="lezioni">02</span><span data-i18n="nav.classes">Lezioni</span></a></li>
+        <li><a class="menu__link" href="#prima-volta"><span class="menu__n" aria-hidden="true" data-nav-n="prima-volta">03</span><span data-i18n="nav.first_class">Prima volta</span></a></li>
+        <li><a class="menu__link" href="#kristina"><span class="menu__n" aria-hidden="true" data-nav-n="kristina">04</span><span data-i18n="nav.about">Kristina</span></a></li>
+        <li><a class="menu__link" href="#orari"><span class="menu__n" aria-hidden="true" data-nav-n="orari">05</span><span data-i18n="nav.schedule">Orari</span></a></li>
+        <li><a class="menu__link" href="#prezzi"><span class="menu__n" aria-hidden="true" data-nav-n="prezzi">06</span><span data-i18n="nav.pricing">Prezzi</span></a></li>
+        <li><a class="menu__link" href="#dove"><span class="menu__n" aria-hidden="true" data-nav-n="dove">07</span><span data-i18n="nav.location">Dove</span></a></li>
+        <li><a class="menu__link" href="#domande"><span class="menu__n" aria-hidden="true" data-nav-n="domande">08</span><span data-i18n="nav.faq">Domande</span></a></li>
+        <li><a class="menu__link" href="#prenota"><span class="menu__n" aria-hidden="true" data-nav-n="prenota">09</span><span data-i18n="nav.contact">Contatti</span></a></li>
+      </ol>
+    </nav>
+    <div class="menu__foot">
+      <div class="lang" role="group" aria-label="Lingua" data-i18n-attr="aria-label:ui.lang_switch_label">
+        <button type="button" class="lang__btn" data-lang="it" lang="it" aria-pressed="true" aria-label="Italiano">IT</button>
+        <span class="lang__sep" aria-hidden="true"></span>
+        <button type="button" class="lang__btn" data-lang="en" lang="en" aria-pressed="false" aria-label="English">EN</button>
+        <span class="lang__sep" aria-hidden="true"></span>
+        <button type="button" class="lang__btn" data-lang="ru" lang="ru" aria-pressed="false" aria-label="Русский">RU</button>
+        <span class="lang__ink" aria-hidden="true"></span>
+      </div>
+      <a class="btn btn--primary" href="#prenota" data-config-href="whatsapp" data-config-show="whatsapp">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-wa"/></svg>
+        <span class="btn__label" data-i18n="contact.whatsapp_cta">Scrivimi su WhatsApp</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<main id="main">
+
+  <!-- ================= HERO · «il quadro appeso» ================= -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="container hero__in">
+      <div class="hero__rule hero__rule--top" aria-hidden="true"></div>
+      <div class="hero__rule hero__rule--bottom" aria-hidden="true"></div>
+
+      <p class="eyebrow hero__eyebrow" data-i18n="hero.eyebrow">Heels dance · Milano, Brera</p>
+      <h1 class="h1 hero__title" id="hero-title">
+        <span class="hero__line"><span class="hero__line-in" data-i18n="hero.headline_line1">Sui tacchi,</span></span>
+        <span class="hero__line"><em class="hero__line-in" data-i18n="hero.headline_line2">con carattere.</em></span>
+      </h1>
+      <p class="hero__sub hero__fade" data-i18n="hero.subheadline">Lezioni di heels dance con Kristina, nel quartiere delle gallerie. Tecnica. Presenza. Musicalità. Non serve saper ballare. Serve voler provare.</p>
+      <div class="hero__cta hero__fade">
+        <a class="btn btn--primary" href="#prenota" data-config-href="whatsapp" data-config-show="whatsapp">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-wa"/></svg>
+          <span class="btn__label" data-i18n="hero.cta_primary">Scrivimi su WhatsApp</span>
+        </a>
+        <a class="btn btn--secondary" href="#prenota">
+          <span class="btn__label" data-i18n="hero.cta_secondary">Vieni a provare</span>
+          <svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 2v11M3.5 8.5 8 13l4.5-4.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+
+      <!-- Il quadro: la linea-tacco e il quadrato rosso (SLOT-01). Tutto decorativo finché non arriva la foto. -->
+      <div class="hero__quadro">
+        <svg class="hero__heel draw" viewBox="0 0 320 520" aria-hidden="true" focusable="false">
+          <path class="line draw-line" d="M108 60 C84 150 98 240 138 330 C142 352 130 374 126 396 L117 512 L124 512 C130 470 138 432 152 402 C180 406 220 438 266 466 C288 478 304 482 316 488 C312 470 294 450 268 436 C236 420 206 402 190 382 C176 362 170 344 168 326 C168 236 178 150 162 60" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke"/>
+          <path class="heel draw-line" d="M126 396 L117 512 L124 512 C130 470 138 432 152 402" fill="none" stroke="#B02C16" stroke-width="1.5" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
+          <circle class="dot" cx="120.5" cy="512" r="4" fill="#B02C16"/>
+        </svg>
+        <!-- SLOT-01 · IMMAGINE GENERATA (anteprima demo scelta da Manuel: sostituire con lo scatto vero; non rimuovere) (quadrato Rosso Minio, brief §5.1) · FOTO 4:5 · 1600×2000 px (min 1200×1500) · verticale · Kristina a figura intera sui tacchi, fondo neutro chiaro; soggetto nel terzo destro (a sinistra passa la linea-tacco).
+             Con la foto vera: aggiungere class="has-media" alla figure, togliere aria-hidden dal div.hero__quadro e inserire prima del figcaption un <picture> come quello dello SLOT-02
+             (file assets/img/kristina-hero.jpg/.webp + -800, senza loading="lazy" e con fetchpriority="high": è nella prima schermata);
+             alt e didascalia vivono nei dizionari (photos.alt01 da aggiungere / photos.cap01). Vedi docs/FOTO_DA_FORNIRE.md. -->
+        <figure class="hero__frame has-media" data-slot="01" data-ratio="4/5">
+          <picture>
+<source type="image/webp" srcset="assets/img/kristina-hero-800.webp 800w, assets/img/kristina-hero.webp 928w" sizes="(min-width: 1024px) 22vw, 36vw">
+<img class="frame__media" src="assets/img/kristina-hero.jpg" srcset="assets/img/kristina-hero-800.jpg 800w, assets/img/kristina-hero.jpg 928w" sizes="(min-width: 1024px) 22vw, 36vw" width="928" height="1152" alt="Immagine dimostrativa generata al computer: Kristina in piedi sui tacchi, figura intera, in uno studio con pareti avorio" data-i18n-attr="alt:photos.alt01" fetchpriority="high" decoding="async" style="object-position: 50% 30%">
+</picture>
+<figcaption class="cartellino"><span class="cartellino__n">n.01</span><span data-i18n="photos.cap01">Heels, Brera · anteprima</span></figcaption>
+        </figure>
+      </div>
+
+      <div class="hero__colophon hero__fade">
+        <span data-i18n="hero.marquee.1">Brera · Milano</span>
+        <span class="hero__colophon--mid" data-i18n="hero.marquee.4">IT · EN · RU</span>
+        <a class="hero__scroll" href="#manifesto"><span data-i18n="hero.scroll_hint">Scorri</span><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M6 1v10M2 7l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= MARQUEE-FILETTO ================= -->
+  <div class="marquee marquee--strip" data-speed="50" data-marquee="strip">
+    <div class="marquee__viewport" aria-hidden="true">
+      <div class="marquee__track" data-i18n-list="hero.marquee">
+        <span>Heels dance</span><span class="marquee__star">*</span><span>Brera · Milano</span><span class="marquee__star">*</span><span>Tecnica · Presenza · Musicalità</span><span class="marquee__star">*</span><span>Tutti i livelli, tutti i corpi</span><span class="marquee__star">*</span><span>IT · EN · RU</span><span class="marquee__star">*</span>
+      </div>
+      <div class="marquee__track" aria-hidden="true"></div>
+    </div>
+    <button class="marquee__pause" type="button" aria-pressed="false" aria-label="Metti in pausa lo scorrimento" data-ui-pause>
+      <svg class="ico-pause" viewBox="0 0 14 14" aria-hidden="true" focusable="false"><path d="M4 2v10M10 2v10" stroke="currentColor" stroke-width="1.6"/></svg>
+      <svg class="ico-play" viewBox="0 0 14 14" aria-hidden="true" focusable="false"><path d="M4 2l8 5-8 5z" fill="currentColor"/></svg>
+    </button>
+  </div>
+
+  <!-- ================= 01 · MANIFESTO ================= -->
+  <section id="manifesto" class="section manifesto" data-numbered aria-labelledby="manifesto-title">
+    <div class="container">
+      <span class="numeral" aria-hidden="true" data-count="01">01</span>
+      <div class="grid">
+        <div class="section__head reveal">
+          <p class="eyebrow"><span class="eyebrow__n">01</span><span class="eyebrow__sep">—</span><span data-i18n="manifesto.eyebrow">Manifesto</span></p>
+          <h2 class="h2" id="manifesto-title" data-i18n="manifesto.headline" data-em>I tacchi non si portano: si <em>abitano</em>.</h2>
+        </div>
+        <div class="manifesto__body">
+          <p class="lead reveal" data-i18n="manifesto.paragraphs.0">Sui tacchi, il corpo cambia asse. Il peso va in avanti, la schiena si allunga, lo sguardo si alza. L’heels dance parte da qui: da una camminata, poi da una posa, poi da una frase di musica. Si parte dal piede, si arriva allo sguardo.</p>
+          <p class="body reveal" data-i18n="manifesto.paragraphs.1">Non è una danza nata in un posto solo. Viene dal jazz e dai videoclip, dal vogue e dal waacking, dalla scena ballroom di Harlem e dai club di Los Angeles, dal burlesque e dal contemporaneo. In sala tutta questa storia diventa una cosa semplice: tenere il tempo, occupare lo spazio, decidere dove guardare. La sensualità non è il compito. È quello che resta quando la tecnica è a posto.</p>
+          <dl class="defs reveal-group">
+            <div class="defs__item">
+              <dt data-i18n="manifesto.pillars.0.title">Tecnica</dt>
+              <dd data-i18n="manifesto.pillars.0.text">Postura, appoggio, allineamento. Imparare a stare sui tacchi prima di muoversi, e a muoversi prima di ballare. La camminata viene sempre prima della coreografia.</dd>
+            </div>
+            <div class="defs__item">
+              <dt data-i18n="manifesto.pillars.1.title">Presenza</dt>
+              <dd data-i18n="manifesto.pillars.1.text">Occupare lo spazio. Tenere lo sguardo. Decidere ogni gesto, anche quello che sembra non contare. In sala non conta quanto sai fare. Conta se ci sei.</dd>
+            </div>
+            <div class="defs__item">
+              <dt data-i18n="manifesto.pillars.2.title">Musicalità</dt>
+              <dd data-i18n="manifesto.pillars.2.text">Ascoltare prima di contare. Ogni frase di musica ha un peso, un accento, un respiro: il corpo li segue e li rende visibili.</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 02 · LE LEZIONI (sezione invertita) ================= -->
+  <section id="lezioni" class="section is-dark section--classes" data-numbered aria-labelledby="lezioni-title">
+    <div class="container">
+      <span class="numeral" aria-hidden="true" data-count="02">02</span>
+      <div class="grid">
+        <div class="section__head reveal">
+          <p class="eyebrow"><span class="eyebrow__n">02</span><span class="eyebrow__sep">—</span><span data-i18n="classes.eyebrow">Le lezioni</span></p>
+          <h2 class="h2" id="lezioni-title" data-i18n="classes.headline" data-em>Una tecnica, quattro <em>formule</em>.</h2>
+          <p class="section__intro" data-i18n="classes.intro">Ogni lezione dura 60 minuti [TODO: confermare la durata con Kristina] e segue la stessa struttura: riscaldamento senza tacchi, tecnica, floorwork, coreografia, stretching. Cambia il livello, cambia il ritmo, non cambia la cura. La lezione è in italiano; quando serve, spiego in inglese o in russo [TODO: confermare le lingue della lezione].</p>
+        </div>
+      </div>
+      <ul class="cards reveal-group" role="list">
+        <li class="card">
+          <div class="card__top">
+            <span class="card__num" aria-hidden="true">01</span>
+            <svg class="card__glyph" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.2"/></svg>
+          </div>
+          <h3 class="h3 card__title" data-i18n="classes.items.0.name">Fondamenta</h3>
+          <div class="chips">
+            <span class="chip" data-i18n="classes.items.0.level">Base</span>
+            <span class="chip" data-i18n="classes.items.0.duration">60 min [TODO: confermare]</span>
+          </div>
+          <p data-i18n="classes.items.0.description">Per chi non ha mai messo un tacco in sala, o non ha mai ballato. Postura, appoggio del piede, camminata lenta e veloce, bevel, prime isolazioni. Alla fine, una frase coreografica breve: prima contata, poi in musica.</p>
+          <div class="chips">
+            <span class="chip chip--soft" data-i18n="classes.items.0.tags.0">Principianti assoluti</span>
+            <span class="chip chip--soft" data-i18n="classes.items.0.tags.1">Tacco 5–7 cm</span>
+          </div>
+          <a class="btn btn--ghost card__link" href="#prenota"><span data-i18n="nav.book">Prenota</span><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a>
+        </li>
+        <li class="card">
+          <div class="card__top">
+            <span class="card__num" aria-hidden="true">02</span>
+            <svg class="card__glyph" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M17 3v18H3" fill="none" stroke="currentColor" stroke-width="1.2"/><circle cx="17" cy="21" r="1.6" fill="currentColor"/></svg>
+          </div>
+          <h3 class="h3 card__title" data-i18n="classes.items.1.name">Open</h3>
+          <div class="chips">
+            <span class="chip" data-i18n="classes.items.1.level">Tutti i livelli</span>
+            <span class="chip" data-i18n="classes.items.1.duration">60 min [TODO: confermare]</span>
+          </div>
+          <p data-i18n="classes.items.1.description">Una lezione sola per chi inizia e per chi balla già. Tecnica di camminata, lavoro a terra con le ginocchiere, una combinazione nuova ogni settimana. Ogni persona la porta al proprio livello: stessi passi, intensità diversa.</p>
+          <div class="chips">
+            <span class="chip chip--soft" data-i18n="classes.items.1.tags.0">Senza prerequisiti</span>
+            <span class="chip chip--soft" data-i18n="classes.items.1.tags.1">Ogni settimana</span>
+          </div>
+          <a class="btn btn--ghost card__link" href="#prenota"><span data-i18n="nav.book">Prenota</span><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a>
+        </li>
+        <li class="card">
+          <div class="card__top">
+            <span class="card__num" aria-hidden="true">03</span>
+            <svg class="card__glyph" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 3v18M12 3v18M19 3v18" stroke="currentColor" stroke-width="1.2"/></svg>
+          </div>
+          <h3 class="h3 card__title" data-i18n="classes.items.2.name">Coreografia</h3>
+          <div class="chips">
+            <span class="chip" data-i18n="classes.items.2.level">Intermedio</span>
+            <span class="chip" data-i18n="classes.items.2.duration">60 min [TODO: confermare]</span>
+          </div>
+          <p data-i18n="classes.items.2.description">Per chi ha già i fondamenti e vuole il dettaglio: texture, dinamiche, hair whip, cambi di direzione, floorwork completo. Ritmo più rapido, una coreografia che cresce su più lezioni fino a essere ballata per intero.</p>
+          <div class="chips">
+            <span class="chip chip--soft" data-i18n="classes.items.2.tags.0">Dopo Fondamenta</span>
+            <span class="chip chip--soft" data-i18n="classes.items.2.tags.1">Posti limitati</span>
+          </div>
+          <a class="btn btn--ghost card__link" href="#prenota"><span data-i18n="nav.book">Prenota</span><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a>
+        </li>
+        <li class="card">
+          <div class="card__top">
+            <span class="card__num" aria-hidden="true">04</span>
+            <svg class="card__glyph" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 20 A9 12 0 0 1 21 20" fill="none" stroke="currentColor" stroke-width="1.2"/><path d="M8 8h8" stroke="currentColor" stroke-width="1.2"/></svg>
+          </div>
+          <h3 class="h3 card__title" data-i18n="classes.items.3.name">Privata</h3>
+          <div class="chips">
+            <span class="chip" data-i18n="classes.items.3.level">Su misura</span>
+            <span class="chip" data-i18n="classes.items.3.duration">60 min [TODO: confermare]</span>
+          </div>
+          <p data-i18n="classes.items.3.description">Uno a uno, o in due. Un obiettivo preciso: correggere la camminata, preparare un video, sciogliere la paura di cadere. Orario e luogo da concordare.</p>
+          <div class="chips">
+            <span class="chip chip--soft" data-i18n="classes.items.3.tags.0">1:1 o in coppia</span>
+            <span class="chip chip--soft" data-i18n="classes.items.3.tags.1">Su appuntamento</span>
+          </div>
+          <a class="btn btn--ghost card__link" href="#prenota"><span data-i18n="nav.book">Prenota</span><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ================= 03 · LA PRIMA VOLTA ================= -->
+  <section id="prima-volta" class="section prima" data-numbered aria-labelledby="prima-title">
+    <div class="container">
+      <span class="numeral" aria-hidden="true" data-count="03">03</span>
+      <div class="grid">
+        <div class="section__head reveal">
+          <p class="eyebrow"><span class="eyebrow__n">03</span><span class="eyebrow__sep">—</span><span data-i18n="first_class.eyebrow">La prima volta</span></p>
+          <h2 class="h2" id="prima-title" data-i18n="first_class.headline" data-em>Come funziona la <em>prima</em> lezione.</h2>
+          <p class="section__intro" data-i18n="first_class.intro">Un’ora [TODO: confermare la durata], cinque tempi. Arrivi, ti cambi e il resto lo facciamo insieme.</p>
+        </div>
+        <ol class="timeline" role="list">
+          <li class="timeline__step">
+            <span class="timeline__n" aria-hidden="true">01</span>
+            <h3 class="h3" data-i18n="first_class.steps.0.title">Arrivo e riscaldamento</h3>
+            <p data-i18n="first_class.steps.0.text">Dieci minuti prima, per cambiarti e ambientarti. Si comincia senza tacchi, in calzini o a piedi nudi: mobilità di caviglie, bacino e colonna, attivazione del core.</p>
+          </li>
+          <li class="timeline__step">
+            <span class="timeline__n" aria-hidden="true">02</span>
+            <h3 class="h3" data-i18n="first_class.steps.1.title">Tecnica</h3>
+            <p data-i18n="first_class.steps.1.text">Si mettono le scarpe. Postura, peso sull’avampiede, allineamento del ginocchio, bevel, camminata lenta e veloce. La base di tutto quello che viene dopo.</p>
+          </li>
+          <li class="timeline__step">
+            <span class="timeline__n" aria-hidden="true">03</span>
+            <h3 class="h3" data-i18n="first_class.steps.2.title">Floorwork</h3>
+            <p data-i18n="first_class.steps.2.text">Con le ginocchiere (la prima volta bastano leggings lunghi): discese, scivolate, risalite da terra. Con calma, un passaggio per volta, senza saltare niente.</p>
+          </li>
+          <li class="timeline__step">
+            <span class="timeline__n" aria-hidden="true">04</span>
+            <h3 class="h3" data-i18n="first_class.steps.3.title">Coreografia</h3>
+            <p data-i18n="first_class.steps.3.text">Una frase di trenta, quaranta secondi. Prima contata, poi in musica, poi ballata in piccoli gruppi. Sbagliare fa parte del programma.</p>
+          </li>
+          <li class="timeline__step">
+            <span class="timeline__n" aria-hidden="true">05</span>
+            <h3 class="h3" data-i18n="first_class.steps.4.title">Stretching e domande</h3>
+            <p data-i18n="first_class.steps.4.text">Si torna a terra, si allunga, si fanno domande. Ti dico com’è andata e cosa portare la volta dopo.</p>
+          </li>
+        </ol>
+        <div class="callout reveal">
+          <div class="chips">
+            <span class="chip chip--icon">
+              <svg viewBox="0 0 240 200" aria-hidden="true" focusable="false"><path fill="currentColor" d="M6 178 C40 160 80 120 120 84 C140 72 160 62 178 58 C190 60 196 72 192 90 C200 120 206 160 210 190 L188 190 C186 160 184 130 182 104 C160 112 130 140 100 160 C70 178 30 186 6 178 Z"/></svg>
+              <span data-i18n="nav.first_class">Prima volta</span>
+            </span>
+          </div>
+          <p data-i18n="first_class.reassurance">Non serve saper ballare. Non servono nemmeno le scarpe con il tacco: la prima volta vanno bene sneaker pulite o calzini. Se hai un tacco basso e spesso con il cinturino, portalo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 04 · KRISTINA ================= -->
+  <section id="kristina" class="section about" data-numbered aria-labelledby="kristina-title">
+    <div class="container">
+      <span class="numeral" aria-hidden="true" data-count="04">04</span>
+      <div class="grid">
+        <!-- SLOT-02 · FOTO REALE inserita l'11/09/2026 (assets/img/kristina-ritratto-1600.jpg/.webp + -800, 996×1600, ritaglio 4:5 con object-position 50% 18%).
+             Per sostituirla: salvare i nuovi file con gli stessi nomi, oppure cambiare src/srcset qui sotto. Alt e didascalia vivono nei dizionari
+             (photos.alt02 / photos.cap02 in docs/copy.*.json, poi node docs/genera-script.js): non modificare l'alt nell'HTML. -->
+        <figure class="about__media reveal frame-wrap">
+          <div class="frame has-media" data-slot="02" data-ratio="4/5">
+            <svg class="frame__art draw" viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+              <g transform="translate(90,-40) scale(0.95)">
+                <path class="draw-line" d="M108 60 C84 150 98 240 138 330 C142 352 130 374 126 396 L117 512 L124 512 C130 470 138 432 152 402 C180 406 220 438 266 466 C288 478 304 482 316 488 C312 470 294 450 268 436 C236 420 206 402 190 382 C176 362 170 344 168 326 C168 236 178 150 162 60" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke"/>
+                <path class="draw-line" d="M126 396 L117 512 L124 512 C130 470 138 432 152 402" fill="none" stroke="#B02C16" stroke-width="1.5" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
+                <circle cx="120.5" cy="512" r="4" fill="#B02C16"/>
+              </g>
+            </svg>
+          <picture>
+<source type="image/webp" srcset="assets/img/kristina-ritratto-1600-800.webp 800w, assets/img/kristina-ritratto-1600.webp 996w" sizes="(min-width: 1024px) 38vw, (min-width: 768px) 46vw, calc(100vw - 32px)">
+<img class="frame__media" src="assets/img/kristina-ritratto-1600.jpg" srcset="assets/img/kristina-ritratto-1600-800.jpg 800w, assets/img/kristina-ritratto-1600.jpg 996w" sizes="(min-width: 1024px) 38vw, (min-width: 768px) 46vw, calc(100vw - 32px)" width="996" height="1600" alt="Kristina, ritratto a mezza figura, sguardo di lato, luce calda" data-i18n-attr="alt:photos.alt02" loading="lazy" decoding="async" style="object-position: 50% 18%">
+</picture>
+</div>
+          <figcaption class="cartellino"><span class="cartellino__n">n.02</span><span data-i18n="photos.cap02">Kristina — Ritratto</span></figcaption>
+        </figure>
+        <div class="about__text">
+          <div class="section__head reveal">
+            <p class="eyebrow"><span class="eyebrow__n">04</span><span class="eyebrow__sep">—</span><span data-i18n="about.eyebrow">Kristina</span></p>
+            <h2 class="h2" id="kristina-title" data-i18n="about.headline" data-em>Chi ti <em>aspetta</em> in sala.</h2>
+          </div>
+          <div class="prose reveal">
+            <p data-i18n="about.paragraphs.0">Sono nata in Russia e vivo a Milano. [TODO: formazione di Kristina: dove ha studiato danza, con chi, in quali stili]. Insegno heels dance perché è la disciplina in cui tecnica e presenza si incontrano, e perché è quella in cui ho imparato di più.</p>
+            <p data-i18n="about.paragraphs.1">Le mie lezioni partono dalla camminata, perché chi cammina bene balla meglio, e finiscono con una coreografia, perché è lì che si vede se hai ascoltato. Correggo molto, spiego di più. [TODO: percorso di Kristina come ballerina e insegnante, in una o due frasi].</p>
+          </div>
+          <dl class="facts reveal">
+            <div class="facts__item"><dt data-i18n="about.highlights.0.label">Formazione</dt><dd data-i18n="about.highlights.0.value" data-todo-only>[TODO]</dd></div>
+            <div class="facts__item"><dt data-i18n="about.highlights.1.label">Stili</dt><dd data-i18n="about.highlights.1.value" data-todo-only>[TODO]</dd></div>
+            <div class="facts__item"><dt data-i18n="about.highlights.2.label">Lingue della lezione</dt><dd data-i18n="about.highlights.2.value" data-todo-only>[TODO]</dd></div>
+          </dl>
+          <blockquote class="quote reveal"><p data-i18n="about.quote">Si parte dal piede, si arriva allo sguardo.</p></blockquote>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 05 · ORARI ================= -->
+  <section id="orari" class="section section--table" data-numbered aria-labelledby="orari-title">
+    <div class="container">
+      <span class="numeral" aria-hidden="true" data-count="05">05</span>
+      <div class="grid">
+        <div class="section__head reveal">
+          <p class="eyebrow"><span class="eyebrow__n">05</span><span class="eyebrow__sep">—</span><span data-i18n="schedule.eyebrow">Orari</span></p>
+          <h2 class="h2" id="orari-title" data-i18n="schedule.headline" data-em><em>Quando.</em></h2>
+          <span class="badge" data-i18n="ui.example_badge" data-example="schedule">Esempio, non definitivo</span>
+        </div>
+        <div class="table-wrap reveal">
+          <table class="table table--schedule" role="table">
+            <caption class="visually-hidden" data-i18n="schedule.eyebrow">Orari</caption>
+            <thead class="visually-hidden" role="rowgroup"><tr role="row"><th scope="col" role="columnheader" data-i18n="ui.col_day">Giorno</th><th scope="col" role="columnheader" data-i18n="ui.col_time">Ora</th><th scope="col" role="columnheader" data-i18n="ui.col_class">Lezione</th><th scope="col" role="columnheader" data-i18n="ui.col_level">Livello</th></tr></thead>
+            <tbody id="schedule-body" role="rowgroup">
+              <tr role="row"><th scope="row" role="rowheader" data-i18n="schedule.items.0.day">Martedì</th><td role="cell" class="table__time" data-i18n="schedule.items.0.time">19:00–20:00</td><td role="cell" data-i18n="schedule.items.0.class">Fondamenta</td><td role="cell"><span class="chip" data-i18n="schedule.items.0.level">Base</span></td></tr>
+              <tr role="row"><th scope="row" role="rowheader" data-i18n="schedule.items.1.day">Martedì</th><td role="cell" class="table__time" data-i18n="schedule.items.1.time">20:15–21:15</td><td role="cell" data-i18n="schedule.items.1.class">Open</td><td role="cell"><span class="chip" data-i18n="schedule.items.1.level">Tutti i livelli</span></td></tr>
+              <tr role="row"><th scope="row" role="rowheader" data-i18n="schedule.items.2.day">Giovedì</th><td role="cell" class="table__time" data-i18n="schedule.items.2.time">19:30–20:30</td><td role="cell" data-i18n="schedule.items.2.class">Coreografia</td><td role="cell"><span class="chip" data-i18n="schedule.items.2.level">Intermedio</span></td></tr>
+              <tr role="row"><th scope="row" role="rowheader" data-i18n="schedule.items.3.day">Sabato</th><td role="cell" class="table__time" data-i18n="schedule.items.3.time">11:00–12:00</td><td role="cell" data-i18n="schedule.items.3.class">Open</td><td role="cell"><span class="chip" data-i18n="schedule.items.3.level">Tutti i livelli</span></td></tr>
+              <tr role="row"><th scope="row" role="rowheader" data-i18n="schedule.items.4.day">Su appuntamento</th><td role="cell" class="table__time" data-i18n="schedule.items.4.time">Da concordare</td><td role="cell" data-i18n="schedule.items.4.class">Privata</td><td role="cell"><span class="chip" data-i18n="schedule.items.4.level">Su misura</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <aside class="section__aside reveal">
+          <p class="small" data-i18n="schedule.note" data-example="schedule">Orari di esempio, in aggiornamento: il calendario definitivo ti arriva con la conferma su WhatsApp. Posti limitati, prenotazione obbligatoria.</p>
+          <a class="btn btn--ghost" href="#prenota"><span data-i18n="nav.book">Prenota</span><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 06 · PREZZI ================= -->
+  <section id="prezzi" class="section section--table" data-numbered aria-labelledby="prezzi-title">
+    <div class="container">
+      <span class="numeral" aria-hidden="true" data-count="06">06</span>
+      <div class="grid">
+        <div class="section__head reveal">
+          <p class="eyebrow"><span class="eyebrow__n">06</span><span class="eyebrow__sep">—</span><span data-i18n="pricing.eyebrow">Prezzi</span></p>
+          <h2 class="h2" id="prezzi-title" data-i18n="pricing.headline" data-em><em>Quanto.</em></h2>
+          <span class="badge" data-i18n="ui.example_badge" data-example="pricing">Esempio, non definitivo</span>
+        </div>
+        <div class="table-wrap reveal">
+          <table class="table table--prices" role="table">
+            <caption class="visually-hidden" data-i18n="pricing.eyebrow">Prezzi</caption>
+            <thead class="visually-hidden" role="rowgroup"><tr role="row"><th scope="col" role="columnheader" data-i18n="ui.col_plan">Formula</th><th scope="col" role="columnheader" data-i18n="ui.col_price">Prezzo</th></tr></thead>
+            <tbody id="pricing-body" role="rowgroup">
+              <tr role="row" data-featured="false"><th scope="row" role="rowheader"><span data-i18n="pricing.items.0.name">Lezione di prova</span><span class="table__detail" data-i18n="pricing.items.0.detail">Una lezione, qualsiasi livello. Vale una volta sola.</span></th><td role="cell" class="table__price" data-i18n="pricing.items.0.price">15 €</td></tr>
+              <tr role="row" data-featured="false"><th scope="row" role="rowheader"><span data-i18n="pricing.items.1.name">Lezione singola</span><span class="table__detail" data-i18n="pricing.items.1.detail">Quando vuoi, senza vincoli. Prenota entro il giorno prima.</span></th><td role="cell" class="table__price" data-i18n="pricing.items.1.price">22 €</td></tr>
+              <tr role="row" data-featured="false"><th scope="row" role="rowheader"><span data-i18n="pricing.items.2.name">Carnet 5 lezioni</span><span class="table__detail" data-i18n="pricing.items.2.detail">20 € a lezione. Validità 2 mesi.</span></th><td role="cell" class="table__price" data-i18n="pricing.items.2.price">100 €</td></tr>
+              <tr role="row" data-featured="true"><th scope="row" role="rowheader"><span data-i18n="pricing.items.3.name">Carnet 10 lezioni</span><span class="table__detail" data-i18n="pricing.items.3.detail">18 € a lezione. Validità 4 mesi.</span></th><td role="cell" class="table__price" data-i18n="pricing.items.3.price">180 €</td></tr>
+              <tr role="row" data-featured="false"><th scope="row" role="rowheader"><span data-i18n="pricing.items.4.name">Mensile</span><span class="table__detail" data-i18n="pricing.items.4.detail">Una lezione a settimana, quattro al mese, stesso corso.</span></th><td role="cell" class="table__price" data-i18n="pricing.items.4.price">75 €</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <aside class="section__aside reveal">
+          <p class="small" data-i18n="pricing.note" data-example="pricing">Prezzi indicativi, in via di definizione. Le cifre definitive te le confermo su WhatsApp prima della tua prima lezione.</p>
+          <a class="btn btn--ghost" href="#prenota"><span data-i18n="nav.book">Prenota</span><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a>
+        </aside>
+        <p class="small table-foot reveal" data-i18n="pricing.footnote">[TODO: Metodi di pagamento: contanti, bonifico, altro.] [TODO: Eventuale tessera associativa e certificato medico: dipende dall’inquadramento dell’attività.] Le lezioni private hanno un prezzo a parte, su richiesta.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 07 · DOVE ================= -->
+  <section id="dove" class="section where" data-numbered aria-labelledby="dove-title">
+    <div class="container">
+      <span class="numeral" aria-hidden="true" data-count="07">07</span>
+      <div class="grid">
+        <div class="where__text">
+          <div class="section__head reveal">
+            <p class="eyebrow"><span class="eyebrow__n">07</span><span class="eyebrow__sep">—</span><span data-i18n="location.eyebrow">Dove</span></p>
+            <h2 class="h2" id="dove-title" data-i18n="location.headline" data-em>Brera, <em>Milano</em>.</h2>
+          </div>
+          <div class="reveal">
+            <p class="venue" data-i18n="location.address_label" data-venue>[TODO: nome e indirizzo dello spazio]</p>
+            <p class="small" data-i18n="location.address_note">L’indirizzo esatto viene comunicato alla prenotazione.</p>
+          </div>
+          <div class="prose reveal">
+            <p data-i18n="location.paragraphs.0">Le lezioni si tengono in una sala del quartiere di Brera, tra le vie acciottolate, le gallerie e i cortili dell’Accademia. Una Milano più lenta, dove si cammina: il posto giusto per imparare a farlo sui tacchi.</p>
+            <p data-i18n="location.paragraphs.1">L’indirizzo esatto ti arriva alla prenotazione, insieme all’orario e a cosa portare. Lo spazio non è una scuola con l’insegna: è una sala che, per il tempo della lezione, diventa nostra.</p>
+          </div>
+          <ul class="directions reveal">
+            <li data-i18n="location.directions.0">Metro: Lanza M2, Cairoli M1, Montenapoleone M3. Da nord, Moscova M2 e poi corso Garibaldi. [TODO: verificare le fermate una volta noto l’indirizzo della sala]</li>
+            <li data-i18n="location.directions.1">Tram e bus fermano in via Cusani e in via Pontaccio: verifica le linee su atm.it, i percorsi cambiano con i cantieri. [TODO: verificare le vie delle fermate con l’indirizzo definitivo]</li>
+            <li data-i18n="location.directions.2">In auto no: Brera è dentro Area C e i parcheggi sono pochi. In bici o con BikeMi sì.</li>
+          </ul>
+          <p class="reveal"><a class="btn btn--ghost" href="https://www.google.com/maps/search/?api=1&amp;query=Brera%2C%20Milano" data-config-href="maps" target="_blank" rel="noopener noreferrer"><span data-i18n="location.maps_cta">Apri in Google Maps</span><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 12 12 4M6 4h6v6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></p>
+        </div>
+        <!-- SLOT-08 · MINI-MAPPA 4:3 · resta SVG (pianta astratta, non rappresenta le vie reali); in futuro può ospitare una foto dell'ingresso (1600×1200 px). -->
+        <figure class="where__map reveal frame-wrap" aria-hidden="true">
+          <div class="frame frame--map" data-slot="08" data-ratio="4/3">
+            <svg class="frame__art draw" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+              <path class="map__road draw-line" d="M0 70 C80 66 150 80 240 60 S380 40 400 44"/>
+              <path class="map__road draw-line" d="M0 150 C90 140 160 160 260 150 S360 130 400 140"/>
+              <path class="map__road draw-line" d="M0 240 C120 226 220 250 400 230"/>
+              <path class="map__road draw-line" d="M110 0 C104 80 120 160 100 300"/>
+              <path class="map__road draw-line" d="M230 0 C240 90 224 200 236 300"/>
+              <path class="map__road draw-line" d="M320 0 C312 100 330 180 316 300"/>
+              <path class="map__road draw-line" d="M150 60 C200 110 250 130 300 150"/>
+              <circle class="map__ring" cx="236" cy="150" r="14" fill="none" stroke="#B02C16" stroke-width="1"/>
+              <circle class="map__dot breath" cx="236" cy="150" r="5" fill="#B02C16"/>
+            </svg>
+          </div>
+          <figcaption class="cartellino"><span class="cartellino__n">n.08</span><span data-i18n="photos.cap08">Brera, pianta indicativa</span></figcaption>
+        </figure>
+
+        <!-- La parete (brief §5.7): capo sezione + cinque cornici per le foto e il video futuri (SLOT-03…07). Le opere SVG restano finché non arrivano i media. -->
+        <div class="section__head section__head--sub reveal">
+          <p class="eyebrow"><span data-i18n="gallery.eyebrow">La parete</span></p>
+          <h3 class="h3" data-i18n="gallery.headline">Studio, Brera.</h3>
+          <p class="small" data-i18n="gallery.note">Foto e video in arrivo — intanto, le opere.</p>
+        </div>
+        <div class="wall reveal-group" role="region" aria-label="Galleria" data-i18n-attr="aria-label:ui.gallery_label" data-wall>
+          <!-- SLOT-03 · VIDEO 9:16 · 1080×1920 px, 6–10 s in loop, muto · verticale · camminata attraverso la sala, ripresa frontale, tacchi in primo piano.
+               Con il video: class="has-media" sul div.frame e, dentro il div.frame, <video class="frame__media" src="assets/img/03-video-camminata.mp4" poster="assets/img/03-video-poster.jpg" muted playsinline loop preload="none" aria-label="…"></video> e togliere il <svg class="frame__play">; l'avvio automatico va gestito da JS (vedi docs/FOTO_DA_FORNIRE.md). -->
+          <figure class="wall__item wall__item--1 frame-wrap">
+            <div class="frame" data-slot="03" data-ratio="9/16">
+              <svg class="frame__art draw" viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+                <path class="draw-line" d="M90 60 V440 M150 60 V440 M250 60 V440" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                <path class="draw-line" d="M250 440 L300 472" stroke="#B02C16" stroke-width="1.5"/>
+              </svg>
+              <svg class="frame__play" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><circle cx="24" cy="24" r="23" fill="none" stroke="currentColor" stroke-width="1"/><path d="M19 15l14 9-14 9z" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/></svg>
+            </div>
+            <figcaption class="cartellino"><span class="cartellino__n">n.03</span><span data-i18n="ui.video_placeholder">Video in arrivo</span></figcaption>
+          </figure>
+          <!-- SLOT-04 · IMMAGINE GENERATA (anteprima demo scelta da Manuel: sostituire con lo scatto vero; non rimuovere) · FOTO 4:5 · 1200×1500 px · verticale · dettaglio: scarpa col tacco sul parquet, bevel, caviglia. Con la foto: class="has-media" sul div.frame e un <picture> come nello SLOT-02 (assets/img/kristina-scarpe.jpg/.webp + -800); alt in photos.alt04 (da aggiungere ai dizionari), didascalia in photos.cap04. -->
+          <figure class="wall__item wall__item--2 frame-wrap">
+            <div class="frame has-media" data-slot="04" data-ratio="4/5">
+              <svg class="frame__art draw" viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+                <path class="draw-line" d="M280 70 V400 H60" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                <circle cx="280" cy="400" r="5" fill="#B02C16"/>
+              </svg>
+            <picture>
+<source type="image/webp" srcset="assets/img/kristina-scarpe-800.webp 800w, assets/img/kristina-scarpe.webp 928w" sizes="(min-width: 1024px) 30vw, (min-width: 768px) 46vw, calc(100vw - 32px)">
+<img class="frame__media" src="assets/img/kristina-scarpe.jpg" srcset="assets/img/kristina-scarpe-800.jpg 800w, assets/img/kristina-scarpe.jpg 928w" sizes="(min-width: 1024px) 30vw, (min-width: 768px) 46vw, calc(100vw - 32px)" width="928" height="1152" alt="Immagine dimostrativa generata: scarpe con tacco block e cinturino alla caviglia sul parquet, in posizione di bevel" data-i18n-attr="alt:photos.alt04" loading="lazy" decoding="async" style="object-position: 50% 60%">
+</picture>
+</div>
+            <figcaption class="cartellino"><span class="cartellino__n">n.04</span><span data-i18n="photos.cap04">Dettaglio, tacco · anteprima</span></figcaption>
+          </figure>
+          <!-- SLOT-05 · IMMAGINE GENERATA (anteprima demo scelta da Manuel: sostituire con lo scatto vero; non rimuovere) · FOTO 4:5 · 1200×1500 px · verticale · la classe da dietro, in fila, durante la camminata (con il consenso delle persone). Con la foto: come SLOT-04 (assets/img/kristina-classe.*; photos.alt05 / photos.cap05). -->
+          <figure class="wall__item wall__item--3 frame-wrap">
+            <div class="frame has-media" data-slot="05" data-ratio="4/5">
+              <svg class="frame__art draw" viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+                <path class="draw-line" d="M60 380 A140 210 0 0 1 340 380" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                <path class="draw-line" d="M140 170 H260" stroke="#B02C16" stroke-width="1.5"/>
+              </svg>
+            <picture>
+<source type="image/webp" srcset="assets/img/kristina-classe-800.webp 800w, assets/img/kristina-classe.webp 928w" sizes="(min-width: 1024px) 30vw, (min-width: 768px) 46vw, calc(100vw - 32px)">
+<img class="frame__media" src="assets/img/kristina-classe.jpg" srcset="assets/img/kristina-classe-800.jpg 800w, assets/img/kristina-classe.jpg 928w" sizes="(min-width: 1024px) 30vw, (min-width: 768px) 46vw, calc(100vw - 32px)" width="928" height="1152" alt="Immagine dimostrativa generata: una classe vista da dietro, in fila davanti allo specchio, durante la camminata sui tacchi" data-i18n-attr="alt:photos.alt05" loading="lazy" decoding="async" style="object-position: 50% 50%">
+</picture>
+</div>
+            <figcaption class="cartellino"><span class="cartellino__n">n.05</span><span data-i18n="photos.cap05">La classe · anteprima</span></figcaption>
+          </figure>
+          <!-- SLOT-06 · IMMAGINE GENERATA (anteprima demo scelta da Manuel: sostituire con lo scatto vero; non rimuovere) · FOTO 1:1 · 1200×1200 px · quadrato · mani e posa, dettaglio di braccia, senza volto. Con la foto: come SLOT-04 (assets/img/kristina-mani.*; photos.alt06 / photos.cap06). -->
+          <figure class="wall__item wall__item--4 frame-wrap">
+            <div class="frame has-media" data-slot="06" data-ratio="1/1">
+              <svg class="frame__art" viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+                <g fill="#B5AEA3">
+                  <circle cx="50" cy="100" r="2.5"/><circle cx="110" cy="100" r="2.5"/><circle cx="170" cy="100" r="2.5"/><circle cx="230" cy="100" r="2.5"/><circle cx="290" cy="100" r="2.5"/><circle cx="350" cy="100" r="2.5"/>
+                  <circle cx="50" cy="160" r="2.5"/><circle cx="110" cy="160" r="2.5"/><circle cx="170" cy="160" r="2.5"/><circle cx="230" cy="160" r="2.5"/><circle cx="290" cy="160" r="2.5"/><circle cx="350" cy="160" r="2.5"/>
+                  <circle cx="50" cy="220" r="2.5"/><circle cx="110" cy="220" r="2.5"/><circle cx="170" cy="220" r="2.5"/><circle cx="230" cy="220" r="2.5"/><circle cx="290" cy="220" r="2.5"/><circle cx="350" cy="220" r="2.5"/>
+                  <circle cx="50" cy="280" r="2.5"/><circle cx="110" cy="280" r="2.5"/><circle cx="170" cy="280" r="2.5"/><circle cx="230" cy="280" r="2.5"/><circle cx="290" cy="280" r="2.5"/><circle cx="350" cy="280" r="2.5"/>
+                  <circle cx="50" cy="340" r="2.5"/><circle cx="110" cy="340" r="2.5"/><circle cx="170" cy="340" r="2.5"/><circle cx="230" cy="340" r="2.5"/><circle cx="290" cy="340" r="2.5"/><circle cx="350" cy="340" r="2.5"/>
+                  <circle cx="50" cy="400" r="2.5"/><circle cx="110" cy="400" r="2.5"/><circle cx="170" cy="400" r="2.5"/><circle cx="230" cy="400" r="2.5"/><circle cx="290" cy="400" r="2.5"/><circle cx="350" cy="400" r="2.5"/>
+                </g>
+                <rect x="230" y="220" width="60" height="60" fill="#B02C16"/>
+              </svg>
+            <picture>
+<source type="image/webp" srcset="assets/img/kristina-mani-800.webp 800w, assets/img/kristina-mani.webp 1024w" sizes="(min-width: 1024px) 30vw, (min-width: 768px) 46vw, calc(100vw - 32px)">
+<img class="frame__media" src="assets/img/kristina-mani.jpg" srcset="assets/img/kristina-mani-800.jpg 800w, assets/img/kristina-mani.jpg 1024w" sizes="(min-width: 1024px) 30vw, (min-width: 768px) 46vw, calc(100vw - 32px)" width="1024" height="1024" alt="Immagine dimostrativa generata: mani e braccia in una posa espressiva, senza volto" data-i18n-attr="alt:photos.alt06" loading="lazy" decoding="async" style="object-position: 50% 50%">
+</picture>
+</div>
+            <figcaption class="cartellino"><span class="cartellino__n">n.06</span><span data-i18n="photos.cap06">Mani · anteprima</span></figcaption>
+          </figure>
+          <!-- SLOT-07 · IMMAGINE GENERATA (anteprima demo scelta da Manuel: sostituire con lo scatto vero; non rimuovere) · FOTO 3:2 · 1500×1000 px · orizzontale · esterno a Brera: cortile, ciottoli, un tacco in primo piano. Con la foto: come SLOT-04 (assets/img/kristina-brera.*, sizes="(min-width: 1024px) 44vw, calc(100vw - 32px)"; photos.alt07 / photos.cap07). -->
+          <figure class="wall__item wall__item--5 frame-wrap">
+            <div class="frame has-media" data-slot="07" data-ratio="3/2">
+              <svg class="frame__art draw" viewBox="60 300 320 220" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+                <path class="draw-line" d="M108 60 C84 150 98 240 138 330 C142 352 130 374 126 396 L117 512 L124 512 C130 470 138 432 152 402 C180 406 220 438 266 466 C288 478 304 482 316 488 C312 470 294 450 268 436 C236 420 206 402 190 382 C176 362 170 344 168 326 C168 236 178 150 162 60" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke"/>
+                <path class="draw-line" d="M126 396 L117 512 L124 512 C130 470 138 432 152 402" fill="none" stroke="#B02C16" stroke-width="1.5" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
+                <circle cx="120.5" cy="512" r="4" fill="#B02C16"/>
+              </svg>
+            <picture>
+<source type="image/webp" srcset="assets/img/kristina-brera-800.webp 800w, assets/img/kristina-brera.webp 1264w" sizes="(min-width: 1024px) 62vw, calc(100vw - 32px)">
+<img class="frame__media" src="assets/img/kristina-brera.jpg" srcset="assets/img/kristina-brera-800.jpg 800w, assets/img/kristina-brera.jpg 1264w" sizes="(min-width: 1024px) 62vw, calc(100vw - 32px)" width="1264" height="848" alt="Immagine dimostrativa generata: Kristina cammina sui tacchi in un cortile di ciottoli a Brera" data-i18n-attr="alt:photos.alt07" loading="lazy" decoding="async" style="object-position: 50% 50%">
+</picture>
+</div>
+            <figcaption class="cartellino"><span class="cartellino__n">n.07</span><span data-i18n="photos.cap07">Brera, cortile · anteprima</span></figcaption>
+          </figure>
+        </div>
+        <p class="small dev-note" data-i18n="photos.demo_note" data-dev-note>Le immagini contrassegnate «anteprima» sono generate al computer a partire da una foto di Kristina: mostrano l’effetto finale e verranno sostituite dagli scatti veri.</p>
+        <p class="wall__link reveal" data-config-show="instagram"><a class="btn btn--ghost" href="#prenota" data-config-href="instagram"><span data-i18n="contact.instagram_cta">Seguimi su Instagram</span><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 12 12 4M6 4h6v6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= — · VOCI (nascosta finché non ci sono recensioni vere) ================= -->
+  <section id="dicono" class="section" data-numbered data-feature="testimonials" hidden aria-labelledby="dicono-title">
+    <div class="container">
+      <span class="numeral" aria-hidden="true" data-count="—">—</span>
+      <div class="grid">
+        <div class="section__head reveal">
+          <p class="eyebrow"><span class="eyebrow__n">—</span><span class="eyebrow__sep">—</span><span data-i18n="testimonials.eyebrow">Voci</span></p>
+          <h2 class="h2" id="dicono-title" data-i18n="testimonials.headline" data-em>Voci dalla <em>sala</em>.</h2>
+        </div>
+        <div class="quotes reveal-group" id="testimonials-list"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 08 · DOMANDE ================= -->
+  <section id="domande" class="section faq-section" data-numbered aria-labelledby="domande-title">
+    <div class="container">
+      <span class="numeral" aria-hidden="true" data-count="08">08</span>
+      <div class="grid">
+        <div class="section__head reveal">
+          <p class="eyebrow"><span class="eyebrow__n">08</span><span class="eyebrow__sep">—</span><span data-i18n="faq.eyebrow">Domande</span></p>
+          <h2 class="h2" id="domande-title" data-i18n="faq.headline" data-em>Prima di <em>venire</em>.</h2>
+        </div>
+        <div class="faq reveal-group" id="faq">
+          <div class="faq__item">
+            <h3 class="faq__q"><button type="button" class="faq__btn" id="faq-q-0" aria-expanded="true" aria-controls="faq-a-0"><span data-i18n="faq.items.0.q">Non ho mai ballato. Posso venire?</span><svg class="faq__icon" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 1v14M1 8h14" stroke="currentColor" stroke-width="1.4"/></svg></button></h3>
+            <div class="faq__a" id="faq-a-0"><div class="faq__a-in"><p data-i18n="faq.items.0.a">Sì. Fondamenta e Open partono dalla camminata, non dalla coreografia. Non serve saper ballare. Serve voler provare.</p></div></div>
+          </div>
+          <div class="faq__item">
+            <h3 class="faq__q"><button type="button" class="faq__btn" id="faq-q-1" aria-expanded="true" aria-controls="faq-a-1"><span data-i18n="faq.items.1.q">Che scarpe servono?</span><svg class="faq__icon" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 1v14M1 8h14" stroke="currentColor" stroke-width="1.4"/></svg></button></h3>
+            <div class="faq__a" id="faq-a-1"><div class="faq__a-in"><p data-i18n="faq.items.1.a">Per iniziare: tacco spesso o a blocco, 5–7 centimetri, con cinturino alla caviglia o allacciatura, suola sottile con un po’ di aderenza. Per ora meglio evitare tacchi a spillo e plateau molto alti, e lascia a casa le scarpe da sera: non sono fatte per muoversi. Ai tacchi alti e alle scarpe da danza vere e proprie si arriva dopo, quando la camminata è a posto. Se non hai ancora un paio adatto, vieni in sneaker o in calzini e lo compri dopo la prima lezione, quando sai cosa cercare.</p></div></div>
+          </div>
+          <div class="faq__item">
+            <h3 class="faq__q"><button type="button" class="faq__btn" id="faq-q-2" aria-expanded="true" aria-controls="faq-a-2"><span data-i18n="faq.items.2.q">Le ginocchiere servono davvero?</span><svg class="faq__icon" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 1v14M1 8h14" stroke="currentColor" stroke-width="1.4"/></svg></button></h3>
+            <div class="faq__a" id="faq-a-2"><div class="faq__a-in"><p data-i18n="faq.items.2.a">Sì. Nel floorwork si sta in ginocchio, si scivola, si rotola. Consiglio ginocchiere da danza sottili, non quelle da pallavolo. Per la prima lezione bastano leggings lunghi che coprono il ginocchio.</p></div></div>
+          </div>
+          <div class="faq__item">
+            <h3 class="faq__q"><button type="button" class="faq__btn" id="faq-q-3" aria-expanded="true" aria-controls="faq-a-3"><span data-i18n="faq.items.3.q">Cosa mi metto?</span><svg class="faq__icon" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 1v14M1 8h14" stroke="currentColor" stroke-width="1.4"/></svg></button></h3>
+            <div class="faq__a" id="faq-a-3"><div class="faq__a-in"><p data-i18n="faq.items.3.a">Qualcosa di aderente: leggings, shorts, body, top. Devo vedere le linee del corpo per correggerle. Evita i pantaloni larghi (il tacco ci resta impigliato), i gioielli ingombranti e le creme o gli oli sulla pelle prima della lezione. In borsa: scarpe, ginocchiere, acqua, un asciugamano.</p></div></div>
+          </div>
+          <div class="faq__item">
+            <h3 class="faq__q"><button type="button" class="faq__btn" id="faq-q-4" aria-expanded="true" aria-controls="faq-a-4"><span data-i18n="faq.items.4.q">È solo per donne?</span><svg class="faq__icon" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 1v14M1 8h14" stroke="currentColor" stroke-width="1.4"/></svg></button></h3>
+            <div class="faq__a" id="faq-a-4"><div class="faq__a-in"><p data-i18n="faq.items.4.a">No. L’heels dance è per chiunque voglia salire sui tacchi: donne, uomini, persone di ogni genere, età e corpo. [TODO: confermare con Kristina se citare coreografi come Yanis Marshall o i Kazaky, che hanno portato gli uomini sui tacchi davanti al pubblico di mezzo mondo.] In sala conta la camminata, non l’anagrafe.</p></div></div>
+          </div>
+          <div class="faq__item">
+            <h3 class="faq__q"><button type="button" class="faq__btn" id="faq-q-5" aria-expanded="true" aria-controls="faq-a-5"><span data-i18n="faq.items.5.q">Ho paura di cadere.</span><svg class="faq__icon" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 1v14M1 8h14" stroke="currentColor" stroke-width="1.4"/></svg></button></h3>
+            <div class="faq__a" id="faq-a-5"><div class="faq__a-in"><p data-i18n="faq.items.5.a">È normale, e si lavora proprio su questo. Si parte con un tacco basso e spesso, ci si scalda senza scarpe, si rinforzano gambe e caviglie. Nessuno ti chiede un tacco da dodici centimetri. Prima si impara a stare, poi a camminare, poi a ballare.</p></div></div>
+          </div>
+          <div class="faq__item">
+            <h3 class="faq__q"><button type="button" class="faq__btn" id="faq-q-6" aria-expanded="true" aria-controls="faq-a-6"><span data-i18n="faq.items.6.q">Devo essere sensuale?</span><svg class="faq__icon" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 1v14M1 8h14" stroke="currentColor" stroke-width="1.4"/></svg></button></h3>
+            <div class="faq__a" id="faq-a-6"><div class="faq__a-in"><p data-i18n="faq.items.6.a">No. La sensualità, se arriva, è una conseguenza della tecnica, non un compito. In sala si lavora sul peso, sul core, sulle linee, sullo sguardo. Il resto viene da sé, e quanto mostrarne lo decidi tu.</p></div></div>
+          </div>
+          <div class="faq__item">
+            <h3 class="faq__q"><button type="button" class="faq__btn" id="faq-q-7" aria-expanded="true" aria-controls="faq-a-7"><span data-i18n="faq.items.7.q">In che lingua è la lezione?</span><svg class="faq__icon" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 1v14M1 8h14" stroke="currentColor" stroke-width="1.4"/></svg></button></h3>
+            <div class="faq__a" id="faq-a-7"><div class="faq__a-in"><p data-i18n="faq.items.7.a">In italiano. Parlo anche inglese e russo e, quando serve, spiego nella lingua di chi ho davanti [TODO: confermare le lingue della lezione]. Se preferisci, scrivimi nella tua lingua: rispondo in tutte e tre.</p></div></div>
+          </div>
+          <div class="faq__item">
+            <h3 class="faq__q"><button type="button" class="faq__btn" id="faq-q-8" aria-expanded="true" aria-controls="faq-a-8"><span data-i18n="faq.items.8.q">Come prenoto, e se non posso venire?</span><svg class="faq__icon" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 1v14M1 8h14" stroke="currentColor" stroke-width="1.4"/></svg></button></h3>
+            <div class="faq__a" id="faq-a-8"><div class="faq__a-in"><p data-i18n="faq.items.8.a">Scrivimi su WhatsApp: ti confermo posto, orario e indirizzo. I posti sono limitati, la prenotazione è obbligatoria. Se non puoi venire, avvisami il prima possibile [TODO: indicare le ore di preavviso richieste]. [TODO: politica di recupero della lezione, da concordare con Kristina]</p></div></div>
+          </div>
+          <div class="faq__item">
+            <h3 class="faq__q"><button type="button" class="faq__btn" id="faq-q-9" aria-expanded="true" aria-controls="faq-a-9"><span data-i18n="faq.items.9.q">Serve un certificato medico?</span><svg class="faq__icon" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 1v14M1 8h14" stroke="currentColor" stroke-width="1.4"/></svg></button></h3>
+            <div class="faq__a" id="faq-a-9"><div class="faq__a-in"><p data-i18n="faq.items.9.a">Dipende da com’è organizzata l’attività [TODO: libera professione o associazione sportiva]. Ti dico tutto alla prenotazione. In ogni caso, se hai avuto infortuni alle caviglie, alle ginocchia o alle anche, o se sei in gravidanza, parlane prima con il tuo medico e poi con me.</p></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= NASTRO TRILINGUE + 09 · PRENOTA ================= -->
+  <div class="marquee marquee--nastro" data-speed="40" data-marquee="nastro">
+    <div class="marquee__viewport" aria-hidden="true">
+      <div class="marquee__track" data-marquee-track="nastro">
+        <span lang="it">Vieni a provare.</span><span class="marquee__star">*</span><span lang="en">Come try a class.</span><span class="marquee__star">*</span><span lang="ru">Приходите попробовать.</span><span class="marquee__star">*</span>
+      </div>
+      <div class="marquee__track" aria-hidden="true"></div>
+    </div>
+    <button class="marquee__pause" type="button" aria-pressed="false" aria-label="Metti in pausa lo scorrimento" data-ui-pause>
+      <svg class="ico-pause" viewBox="0 0 14 14" aria-hidden="true" focusable="false"><path d="M4 2v10M10 2v10" stroke="currentColor" stroke-width="1.6"/></svg>
+      <svg class="ico-play" viewBox="0 0 14 14" aria-hidden="true" focusable="false"><path d="M4 2l8 5-8 5z" fill="currentColor"/></svg>
+    </button>
+  </div>
+
+  <section id="prenota" class="section section--book" data-numbered aria-labelledby="prenota-title">
+    <div class="container">
+      <span class="numeral" aria-hidden="true" data-count="09">09</span>
+      <div class="grid">
+        <div class="book">
+          <div class="section__head reveal">
+            <p class="eyebrow"><span class="eyebrow__n">09</span><span class="eyebrow__sep">—</span><span data-i18n="contact.eyebrow">Prenota</span></p>
+            <h2 class="h2 h2--xl" id="prenota-title" data-i18n="contact.headline" data-em>Vieni a <em>provare</em>.</h2>
+          </div>
+          <p class="body reveal" data-i18n="contact.text">Un messaggio, e ti rispondo con posto, orario e indirizzo. Dimmi come ti chiami e se hai già ballato: il resto lo vediamo in sala.</p>
+          <div class="book__cta reveal">
+            <a class="btn btn--primary" href="#prenota" data-config-href="whatsapp" data-config-show="whatsapp">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-wa"/></svg>
+              <span class="btn__label" data-i18n="contact.whatsapp_cta">Scrivimi su WhatsApp</span>
+            </a>
+            <a class="btn btn--secondary" href="#prenota" data-config-href="instagram" data-config-show="instagram">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor"/></svg>
+              <span class="btn__label" data-i18n="contact.instagram_cta">Seguimi su Instagram</span>
+              <svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 12 12 4M6 4h6v6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+          <p class="reveal" data-config-show="email"><a class="btn btn--ghost" href="#prenota" data-config-href="email"><span data-i18n="contact.email_cta">Scrivimi un’email [TODO: confermare se Kristina vuole pubblicare un indirizzo email; altrimenti rimuovere il pulsante]</span></a></p>
+          <p class="small reveal" data-i18n="contact.response_note">Rispondo di solito entro un giorno [TODO: confermare i tempi di risposta]. Durante le lezioni il telefono resta in borsa.</p>
+        </div>
+        <div class="book__monogram" aria-hidden="true">
+          <svg class="monogram" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+            <rect x="14.5" y="8.5" width="6" height="47" fill="none" stroke="currentColor" stroke-width="1"/>
+            <path d="M21 34 L46 8" stroke="currentColor" stroke-width="1" fill="none"/>
+            <path d="M21 30 L29 27 L49 55.5 L47.5 56.5 Z" fill="none" stroke="currentColor" stroke-width="1" stroke-linejoin="round"/>
+            <circle class="monogram__dot breath" cx="48.5" cy="57" r="3"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer is-dark">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <svg class="monogram" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+          <rect x="14" y="8" width="7" height="48" fill="currentColor"/>
+          <path d="M21 34 L46 8" stroke="currentColor" stroke-width="1.6" fill="none"/>
+          <path d="M21 30 L29 27 L49 55.5 L47.5 56.5 Z" fill="currentColor"/>
+          <circle class="monogram__dot" cx="48.5" cy="57" r="3"/>
+        </svg>
+        <p class="footer__tagline" data-i18n="footer.tagline">Heels dance a Brera, Milano. Tecnica. Presenza. Musicalità.</p>
+        <p class="small" data-i18n="footer.legal" data-legal>© 2026 Kristina · Heels dance · Brera, Milano [TODO: · P.IVA / C.F.]</p>
+      </div>
+      <nav class="footer__nav" aria-label="Menu del piè di pagina" data-i18n-attr="aria-label:ui.nav_footer">
+        <ul class="footer__list" role="list">
+          <li><a href="#lezioni" data-i18n="nav.classes">Lezioni</a></li>
+          <li><a href="#prima-volta" data-i18n="nav.first_class">Prima volta</a></li>
+          <li><a href="#kristina" data-i18n="nav.about">Kristina</a></li>
+          <li><a href="#orari" data-i18n="nav.schedule">Orari</a></li>
+          <li><a href="#prezzi" data-i18n="nav.pricing">Prezzi</a></li>
+          <li><a href="#dove" data-i18n="nav.location">Dove</a></li>
+          <li><a href="#domande" data-i18n="nav.faq">Domande</a></li>
+          <li><a href="#prenota" data-i18n="nav.contact">Contatti</a></li>
+        </ul>
+      </nav>
+      <ul class="footer__list footer__contacts" role="list">
+        <li data-config-show="whatsapp"><a href="#prenota" data-config-href="whatsapp"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-wa"/></svg><span data-i18n="contact.whatsapp_cta">Scrivimi su WhatsApp</span></a></li>
+        <li data-config-show="instagram"><a href="#prenota" data-config-href="instagram"><svg viewBox="0 0 240 200" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="1.25" stroke-linejoin="round" vector-effect="non-scaling-stroke" d="M6 178 C40 160 80 120 120 84 C140 72 160 62 178 58 C190 60 196 72 192 90 C198 120 204 160 206 190 L196 190 C194 160 190 130 184 104 C160 112 130 140 100 160 C70 178 30 186 6 178 Z"/></svg><span data-i18n="contact.instagram_cta">Seguimi su Instagram</span></a></li>
+        <li data-config-show="email"><a href="#prenota" data-config-href="email"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M3 6l9 7 9-7" fill="none" stroke="currentColor" stroke-width="1.4"/></svg><span data-i18n="contact.email_cta">Scrivimi un’email [TODO: confermare se Kristina vuole pubblicare un indirizzo email; altrimenti rimuovere il pulsante]</span></a></li>
+      </ul>
+      <div class="footer__meta">
+        <div class="lang" role="group" aria-label="Lingua" data-i18n-attr="aria-label:ui.lang_switch_label">
+          <button type="button" class="lang__btn" data-lang="it" lang="it" aria-pressed="true" aria-label="Italiano">IT</button>
+          <span class="lang__sep" aria-hidden="true"></span>
+          <button type="button" class="lang__btn" data-lang="en" lang="en" aria-pressed="false" aria-label="English">EN</button>
+          <span class="lang__sep" aria-hidden="true"></span>
+          <button type="button" class="lang__btn" data-lang="ru" lang="ru" aria-pressed="false" aria-label="Русский">RU</button>
+          <span class="lang__ink" aria-hidden="true"></span>
+        </div>
+        <p class="small" data-i18n="footer.privacy">Questo sito non usa cookie, non ha moduli, non traccia le visite e non carica risorse da terze parti: le prenotazioni avvengono su WhatsApp e Instagram, secondo le rispettive informative.</p>
+        <p class="small" data-i18n="footer.credits">Sito fatto a mano a Milano.</p>
+      </div>
+    </div>
+    <div class="footer__end" aria-hidden="true"><span class="footer__fine" data-i18n="ui.end">fine</span></div>
+  </div>
+</footer>
+
+<a href="#top" class="totop" id="totop" aria-label="Torna su" data-i18n-attr="aria-label:ui.back_to_top">
+  <svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 14V3M3.5 7.5 8 3l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</a>
+</body>
+</html>

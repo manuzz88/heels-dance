@@ -1,0 +1,354 @@
+{
+  "meta": {
+    "title": "Heels dance in Brera, Milan · Classes with Kristina",
+    "description": "Heels dance classes in Milan, Brera: posture, walks, floorwork and choreography in heels. Complete beginners welcome. Book on WhatsApp.",
+    "og_title": "In heels, with attitude. Heels dance in Brera, Milan",
+    "og_description": "Heels dance classes with Kristina in Milan, Brera. Technique. Presence. Musicality. Complete beginners welcome. Book on WhatsApp."
+  },
+  "nav": {
+    "classes": "Classes",
+    "first_class": "First time",
+    "about": "Kristina",
+    "schedule": "Schedule",
+    "pricing": "Prices",
+    "location": "Where",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "book": "Book"
+  },
+  "hero": {
+    "eyebrow": "Heels dance · Milan, Brera",
+    "headline_line1": "In heels,",
+    "headline_line2": "with attitude.",
+    "subheadline": "Heels dance classes with Kristina, in the art gallery district. Technique. Presence. Musicality. You don’t need to know how to dance. You just need to want to try.",
+    "cta_primary": "Message me on WhatsApp",
+    "cta_secondary": "Come try a class",
+    "marquee": [
+      "Heels dance",
+      "Brera · Milan",
+      "Technique · Presence · Musicality",
+      "All levels, all bodies",
+      "IT · EN · RU"
+    ],
+    "scroll_hint": "Scroll"
+  },
+  "manifesto": {
+    "eyebrow": "Manifesto",
+    "headline": "You don’t wear heels. You inhabit them.",
+    "paragraphs": [
+      "In heels, the body finds a new axis. The weight shifts forward, the spine lengthens, the gaze lifts. That is where heels dance begins: with a walk, then a pose, then a phrase of music. It starts at the feet and ends in the eyes.",
+      "It isn’t a dance born in one place. It comes from jazz and music videos, from vogue and waacking, from the Harlem ballroom scene and the clubs of Los Angeles, from burlesque and contemporary. In the studio, all that history comes down to something simple: keeping time, taking up space, deciding where to look. Sensuality isn’t the goal. It’s what’s left once the technique is right."
+    ],
+    "pillars": [
+      {
+        "title": "Technique",
+        "text": "Posture, weight placement, alignment. Learning to stand in heels before you move, and to move before you dance. The walk always comes before the choreography."
+      },
+      {
+        "title": "Presence",
+        "text": "Taking up space. Holding the gaze. Deciding every gesture, even the ones that seem not to matter. In the studio, it’s not about how much you can do. It’s about whether you’re there."
+      },
+      {
+        "title": "Musicality",
+        "text": "Listening before counting. Every phrase of music has a weight, an accent, a breath: the body follows them and makes them visible."
+      }
+    ]
+  },
+  "classes": {
+    "eyebrow": "Classes",
+    "headline": "One technique, four formats.",
+    "intro": "Every class runs 60 minutes [TODO: confirm duration with Kristina] and follows the same structure: warm-up without heels, technique, floorwork, choreography, stretching. The level changes, the pace changes, the attention doesn’t. Classes are taught in Italian; when needed, I explain in English or Russian [TODO: confirm class languages].",
+    "items": [
+      {
+        "name": "Foundations",
+        "level": "Beginner",
+        "duration": "60 min [TODO: confirm]",
+        "description": "For anyone who has never danced in heels, or never danced at all. Posture, foot placement, slow and fast walks, bevel, first isolations. To finish, a short choreographic phrase: counted first, then to music.",
+        "tags": [
+          "Complete beginners",
+          "5–7 cm heel"
+        ]
+      },
+      {
+        "name": "Open",
+        "level": "All levels",
+        "duration": "60 min [TODO: confirm]",
+        "description": "One open-level class for those just starting and those who already dance. Walking technique, floorwork with knee pads, a new combination every week. Everyone takes it to their own level: same steps, different intensity.",
+        "tags": [
+          "No prerequisites",
+          "Every week"
+        ]
+      },
+      {
+        "name": "Choreography",
+        "level": "Intermediate",
+        "duration": "60 min [TODO: confirm]",
+        "description": "For those who already have the foundations and want the detail: texture, dynamics, hair whips, changes of direction, full floorwork. A faster pace, and a piece of choreography that builds over several classes until it’s danced from start to finish.",
+        "tags": [
+          "After Foundations",
+          "Limited spots"
+        ]
+      },
+      {
+        "name": "Private",
+        "level": "Tailored",
+        "duration": "60 min [TODO: confirm]",
+        "description": "One-on-one, or as a pair. One clear goal: fixing your walk, preparing a video, getting over the fear of falling. Time and place by arrangement.",
+        "tags": [
+          "1:1 or in pairs",
+          "By appointment"
+        ]
+      }
+    ]
+  },
+  "first_class": {
+    "eyebrow": "Your first time",
+    "headline": "How your first class works.",
+    "intro": "One hour [TODO: confirm duration], five parts. You arrive, you change, and the rest we do together.",
+    "steps": [
+      {
+        "title": "Arrival and warm-up",
+        "text": "Come ten minutes early to change and settle in. We start without heels, in socks or barefoot: ankle, hip and spine mobility, core activation."
+      },
+      {
+        "title": "Technique",
+        "text": "Shoes on. Posture, weight on the ball of the foot, knee alignment, bevel, slow and fast walks. The base for everything that follows."
+      },
+      {
+        "title": "Floorwork",
+        "text": "With knee pads (for your first class, long leggings are enough): getting down to the floor, slides, getting back up. Calmly, one step at a time, skipping nothing."
+      },
+      {
+        "title": "Choreography",
+        "text": "A thirty- to forty-second phrase. Counted first, then to music, then danced in small groups. Getting it wrong is part of the plan."
+      },
+      {
+        "title": "Stretching and questions",
+        "text": "Back down to the floor to stretch and ask questions. I’ll tell you how it went and what to bring next time."
+      }
+    ],
+    "reassurance": "You don’t need to know how to dance. You don’t even need heels: for your first class, clean sneakers or socks are fine. If you have a pair of low, chunky heels with an ankle strap, bring them."
+  },
+  "about": {
+    "eyebrow": "Kristina",
+    "headline": "Who’s waiting for you in the studio.",
+    "paragraphs": [
+      "I was born in Russia and live in Milan. [TODO: Kristina’s training: where she studied dance, with whom, in which styles]. I teach heels dance because it’s the discipline where technique and presence meet, and because it’s the one that has taught me the most.",
+      "My classes start with the walk, because if you walk well, you dance better, and end with choreography, because that’s where it shows whether you’ve been listening. I correct a lot, and explain even more. [TODO: Kristina’s path as a dancer and teacher, in one or two sentences]."
+    ],
+    "highlights": [
+      {
+        "label": "Training",
+        "value": "[TODO]"
+      },
+      {
+        "label": "Styles",
+        "value": "[TODO]"
+      },
+      {
+        "label": "Class languages",
+        "value": "[TODO]"
+      }
+    ],
+    "quote": "It starts at the feet and ends in the eyes."
+  },
+  "schedule": {
+    "eyebrow": "Schedule",
+    "headline": "When.",
+    "note": "Sample schedule, still being finalised: the final timetable comes with your WhatsApp confirmation. Limited spots, booking required.",
+    "items": [
+      {
+        "day": "Tuesday",
+        "time": "19:00–20:00",
+        "class": "Foundations",
+        "level": "Beginner"
+      },
+      {
+        "day": "Tuesday",
+        "time": "20:15–21:15",
+        "class": "Open",
+        "level": "All levels"
+      },
+      {
+        "day": "Thursday",
+        "time": "19:30–20:30",
+        "class": "Choreography",
+        "level": "Intermediate"
+      },
+      {
+        "day": "Saturday",
+        "time": "11:00–12:00",
+        "class": "Open",
+        "level": "All levels"
+      },
+      {
+        "day": "By appointment",
+        "time": "To be arranged",
+        "class": "Private",
+        "level": "Tailored"
+      }
+    ]
+  },
+  "pricing": {
+    "eyebrow": "Prices",
+    "headline": "How much.",
+    "note": "Indicative prices, still being finalised. I’ll confirm the final figures on WhatsApp before your first class.",
+    "items": [
+      {
+        "name": "Trial class",
+        "price": "€15",
+        "detail": "One class, any level. Valid once only.",
+        "featured": false
+      },
+      {
+        "name": "Single class",
+        "price": "€22",
+        "detail": "Whenever you like, no commitment. Book by the day before.",
+        "featured": false
+      },
+      {
+        "name": "5-class pass",
+        "price": "€100",
+        "detail": "€20 per class. Valid for 2 months.",
+        "featured": false
+      },
+      {
+        "name": "10-class pass",
+        "price": "€180",
+        "detail": "€18 per class. Valid for 4 months.",
+        "featured": true
+      },
+      {
+        "name": "Monthly pass",
+        "price": "€75",
+        "detail": "One class a week, four a month, same class.",
+        "featured": false
+      }
+    ],
+    "footnote": "[TODO: Payment methods: cash, bank transfer, other.] [TODO: Membership card and medical certificate, if required: depends on how the activity is set up.] Private classes are priced separately, on request."
+  },
+  "location": {
+    "eyebrow": "Where",
+    "headline": "Brera, Milan.",
+    "paragraphs": [
+      "Classes take place in a studio in the Brera district, among the cobbled streets, the art galleries and the courtyards of the Accademia. A slower Milan, a Milan you walk through: the right place to learn how to do it in heels.",
+      "You’ll get the exact address when you book, along with the time and what to bring. The space isn’t a school with a sign over the door: it’s a studio that, for the length of the class, becomes ours."
+    ],
+    "address_label": "[TODO: name and address of the space]",
+    "address_note": "The exact address is shared when you book.",
+    "directions": [
+      "Metro: Lanza M2, Cairoli M1, Montenapoleone M3. Coming from the north, Moscova M2 and then along corso Garibaldi. [TODO: check the stops once the studio address is known]",
+      "Trams and buses stop on via Cusani and via Pontaccio: check the lines on atm.it, as routes change with roadworks. [TODO: check the stop streets against the final address]",
+      "Not by car: Brera is inside Area C and parking is scarce. By bike or BikeMi, yes."
+    ],
+    "maps_cta": "Open in Google Maps"
+  },
+  "gallery": {
+    "eyebrow": "The wall",
+    "headline": "Studio, Brera.",
+    "note": "Photos and video coming soon — the artworks, for now."
+  },
+  "testimonials": {
+    "eyebrow": "Voices",
+    "headline": "Voices from the studio.",
+    "placeholder_note": "Internal note, not public: this section stays hidden until there are real reviews, written by real people who have authorised publication. No invented testimonials, no made-up names."
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "headline": "Before you come.",
+    "items": [
+      {
+        "q": "I’ve never danced. Can I come?",
+        "a": "Yes. Foundations and Open start with the walk, not the choreography. You don’t need to know how to dance. You just need to want to try."
+      },
+      {
+        "q": "What shoes do I need?",
+        "a": "To start: a chunky or block heel, 5–7 centimetres, with an ankle strap or laces, and a thin sole with a bit of grip. For now, avoid stilettos and very high platforms, and leave your going-out shoes at home: they’re not made for moving in. Higher heels and proper dance shoes come later, once your walk is right. If you don’t have a suitable pair yet, come in sneakers or socks and buy them after your first class, when you know what to look for."
+      },
+      {
+        "q": "Do I really need knee pads?",
+        "a": "Yes. In floorwork you kneel, slide and roll. I recommend thin dance knee pads, not volleyball ones. For your first class, long leggings that cover the knee are enough."
+      },
+      {
+        "q": "What do I wear?",
+        "a": "Something fitted: leggings, shorts, a bodysuit, a top. I need to see the lines of your body to correct them. Avoid wide-leg trousers (heels get caught in them), bulky jewellery, and lotions or oils on your skin before class. In your bag: shoes, knee pads, water, a towel."
+      },
+      {
+        "q": "Is it only for women?",
+        "a": "No. Heels dance is for anyone who wants to step into heels: women, men, people of every gender, age and body. [TODO: confirm with Kristina whether to mention choreographers such as Yanis Marshall or Kazaky, who have put men in heels in front of audiences around the world.] In the studio, it’s the walk that counts, not what’s on your ID."
+      },
+      {
+        "q": "I’m afraid of falling.",
+        "a": "That’s normal, and it’s exactly what we work on. You start with a low, chunky heel, warm up without shoes, and strengthen your legs and ankles. No one is asking you for a twelve-centimetre heel. First you learn to stand, then to walk, then to dance."
+      },
+      {
+        "q": "Do I have to be sensual?",
+        "a": "No. Sensuality, if it comes, is a consequence of technique, not the goal. In the studio we work on weight, core, lines, gaze. The rest comes on its own, and how much of it you show is up to you."
+      },
+      {
+        "q": "What language is the class in?",
+        "a": "Italian. I also speak English and Russian and, when needed, I explain in the language of whoever is in front of me [TODO: confirm class languages]. If you prefer, message me in your own language: I reply in all three."
+      },
+      {
+        "q": "How do I book, and what if I can’t make it?",
+        "a": "Message me on WhatsApp: I’ll confirm your spot, the time and the address. Spots are limited and booking is required. If you can’t make it, let me know as early as possible [TODO: hours of notice required]. [TODO: make-up class policy, to be agreed with Kristina]"
+      },
+      {
+        "q": "Do I need a medical certificate?",
+        "a": "It depends on how the activity is set up [TODO: freelance or sports association]. I’ll tell you everything when you book. Either way, if you’ve had ankle, knee or hip injuries, or if you’re pregnant, talk to your doctor first, then to me."
+      }
+    ]
+  },
+  "contact": {
+    "eyebrow": "Book",
+    "headline": "Come try a class.",
+    "text": "One message, and I’ll reply with your spot, the time and the address. Tell me your name and whether you’ve danced before: the rest we’ll sort out in the studio.",
+    "whatsapp_cta": "Message me on WhatsApp",
+    "whatsapp_prefilled": "Hi Kristina, I found your website and I’d like to try a heels dance class in Brera. My name is [name], level [beginner/intermediate]. When can I come?",
+    "instagram_cta": "Follow me on Instagram",
+    "email_cta": "Send me an email [TODO: confirm whether Kristina wants to publish an email address; otherwise remove the button]",
+    "response_note": "I usually reply within a day [TODO: confirm response times]. During classes, my phone stays in my bag."
+  },
+  "footer": {
+    "tagline": "Heels dance in Brera, Milan. Technique. Presence. Musicality.",
+    "legal": "© 2026 Kristina · Heels dance · Brera, Milan [TODO: · VAT number / tax code]",
+    "privacy": "This site uses no cookies, has no forms, doesn’t track visits and loads no third-party resources: bookings happen on WhatsApp and Instagram, under their respective privacy policies.",
+    "credits": "Handmade in Milan."
+  },
+  "ui": {
+    "lang_switch_label": "Language",
+    "menu_open": "Menu",
+    "menu_close": "Close",
+    "example_badge": "Sample, not final",
+    "back_to_top": "Back to top",
+    "skip_link": "Skip to content",
+    "photo_placeholder": "Photo coming soon",
+    "video_placeholder": "Video coming soon",
+    "nav_main": "Main menu",
+    "nav_footer": "Footer menu",
+    "gallery_label": "Gallery",
+    "col_day": "Day",
+    "col_time": "Time",
+    "col_class": "Class",
+    "col_level": "Level",
+    "col_plan": "Plan",
+    "col_price": "Price",
+    "end": "the end"
+  },
+  "photos": {
+    "cap01": "Heels, Brera · preview",
+    "cap02": "Kristina — Portrait",
+    "alt02": "Kristina, half-length portrait in warm light",
+    "cap04": "Detail, heel · preview",
+    "cap05": "The class · preview",
+    "cap06": "Hands · preview",
+    "cap07": "Brera, courtyard · preview",
+    "cap08": "Brera, schematic map",
+    "alt01": "Computer-generated preview image: Kristina standing in heels, full figure, in a studio with ivory walls",
+    "alt04": "Computer-generated preview image: block-heel ankle-strap shoes on a wooden floor, in bevel position",
+    "alt05": "Computer-generated preview image: a class seen from behind, in a line facing the mirror, during heel walks",
+    "alt06": "Computer-generated preview image: hands and arms in an expressive pose, face not visible",
+    "alt07": "Computer-generated preview image: Kristina walking in heels across a cobblestone courtyard in Brera",
+    "demo_note": "Images marked “preview” are computer-generated from a photo of Kristina: they show the intended look and will be replaced by real photographs."
+  }
+}

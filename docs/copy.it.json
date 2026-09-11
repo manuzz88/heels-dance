@@ -1,0 +1,354 @@
+{
+  "meta": {
+    "title": "Heels dance a Brera, Milano · Lezioni con Kristina",
+    "description": "Lezioni di heels dance a Milano, zona Brera: postura, camminata, floorwork e coreografia sui tacchi. Anche per chi parte da zero. Prenota su WhatsApp.",
+    "og_title": "Sui tacchi, con carattere. Heels dance a Brera, Milano",
+    "og_description": "Lezioni di heels dance con Kristina a Milano, zona Brera. Tecnica. Presenza. Musicalità. Anche per chi parte da zero. Prenota su WhatsApp."
+  },
+  "nav": {
+    "classes": "Lezioni",
+    "first_class": "Prima volta",
+    "about": "Kristina",
+    "schedule": "Orari",
+    "pricing": "Prezzi",
+    "location": "Dove",
+    "faq": "Domande",
+    "contact": "Contatti",
+    "book": "Prenota"
+  },
+  "hero": {
+    "eyebrow": "Heels dance · Milano, Brera",
+    "headline_line1": "Sui tacchi,",
+    "headline_line2": "con carattere.",
+    "subheadline": "Lezioni di heels dance con Kristina, nel quartiere delle gallerie. Tecnica. Presenza. Musicalità. Non serve saper ballare. Serve voler provare.",
+    "cta_primary": "Scrivimi su WhatsApp",
+    "cta_secondary": "Vieni a provare",
+    "marquee": [
+      "Heels dance",
+      "Brera · Milano",
+      "Tecnica · Presenza · Musicalità",
+      "Tutti i livelli, tutti i corpi",
+      "IT · EN · RU"
+    ],
+    "scroll_hint": "Scorri"
+  },
+  "manifesto": {
+    "eyebrow": "Manifesto",
+    "headline": "I tacchi non si portano: si abitano.",
+    "paragraphs": [
+      "Sui tacchi, il corpo cambia asse. Il peso va in avanti, la schiena si allunga, lo sguardo si alza. L’heels dance parte da qui: da una camminata, poi da una posa, poi da una frase di musica. Si parte dal piede, si arriva allo sguardo.",
+      "Non è una danza nata in un posto solo. Viene dal jazz e dai videoclip, dal vogue e dal waacking, dalla scena ballroom di Harlem e dai club di Los Angeles, dal burlesque e dal contemporaneo. In sala tutta questa storia diventa una cosa semplice: tenere il tempo, occupare lo spazio, decidere dove guardare. La sensualità non è il compito. È quello che resta quando la tecnica è a posto."
+    ],
+    "pillars": [
+      {
+        "title": "Tecnica",
+        "text": "Postura, appoggio, allineamento. Imparare a stare sui tacchi prima di muoversi, e a muoversi prima di ballare. La camminata viene sempre prima della coreografia."
+      },
+      {
+        "title": "Presenza",
+        "text": "Occupare lo spazio. Tenere lo sguardo. Decidere ogni gesto, anche quello che sembra non contare. In sala non conta quanto sai fare. Conta se ci sei."
+      },
+      {
+        "title": "Musicalità",
+        "text": "Ascoltare prima di contare. Ogni frase di musica ha un peso, un accento, un respiro: il corpo li segue e li rende visibili."
+      }
+    ]
+  },
+  "classes": {
+    "eyebrow": "Le lezioni",
+    "headline": "Una tecnica, quattro formule.",
+    "intro": "Ogni lezione dura 60 minuti [TODO: confermare la durata con Kristina] e segue la stessa struttura: riscaldamento senza tacchi, tecnica, floorwork, coreografia, stretching. Cambia il livello, cambia il ritmo, non cambia la cura. La lezione è in italiano; quando serve, spiego in inglese o in russo [TODO: confermare le lingue della lezione].",
+    "items": [
+      {
+        "name": "Fondamenta",
+        "level": "Base",
+        "duration": "60 min [TODO: confermare]",
+        "description": "Per chi non ha mai messo un tacco in sala, o non ha mai ballato. Postura, appoggio del piede, camminata lenta e veloce, bevel, prime isolazioni. Alla fine, una frase coreografica breve: prima contata, poi in musica.",
+        "tags": [
+          "Principianti assoluti",
+          "Tacco 5–7 cm"
+        ]
+      },
+      {
+        "name": "Open",
+        "level": "Tutti i livelli",
+        "duration": "60 min [TODO: confermare]",
+        "description": "Una lezione sola per chi inizia e per chi balla già. Tecnica di camminata, lavoro a terra con le ginocchiere, una combinazione nuova ogni settimana. Ogni persona la porta al proprio livello: stessi passi, intensità diversa.",
+        "tags": [
+          "Senza prerequisiti",
+          "Ogni settimana"
+        ]
+      },
+      {
+        "name": "Coreografia",
+        "level": "Intermedio",
+        "duration": "60 min [TODO: confermare]",
+        "description": "Per chi ha già i fondamenti e vuole il dettaglio: texture, dinamiche, hair whip, cambi di direzione, floorwork completo. Ritmo più rapido, una coreografia che cresce su più lezioni fino a essere ballata per intero.",
+        "tags": [
+          "Dopo Fondamenta",
+          "Posti limitati"
+        ]
+      },
+      {
+        "name": "Privata",
+        "level": "Su misura",
+        "duration": "60 min [TODO: confermare]",
+        "description": "Uno a uno, o in due. Un obiettivo preciso: correggere la camminata, preparare un video, sciogliere la paura di cadere. Orario e luogo da concordare.",
+        "tags": [
+          "1:1 o in coppia",
+          "Su appuntamento"
+        ]
+      }
+    ]
+  },
+  "first_class": {
+    "eyebrow": "La prima volta",
+    "headline": "Come funziona la prima lezione.",
+    "intro": "Un’ora [TODO: confermare la durata], cinque tempi. Arrivi, ti cambi e il resto lo facciamo insieme.",
+    "steps": [
+      {
+        "title": "Arrivo e riscaldamento",
+        "text": "Dieci minuti prima, per cambiarti e ambientarti. Si comincia senza tacchi, in calzini o a piedi nudi: mobilità di caviglie, bacino e colonna, attivazione del core."
+      },
+      {
+        "title": "Tecnica",
+        "text": "Si mettono le scarpe. Postura, peso sull’avampiede, allineamento del ginocchio, bevel, camminata lenta e veloce. La base di tutto quello che viene dopo."
+      },
+      {
+        "title": "Floorwork",
+        "text": "Con le ginocchiere (la prima volta bastano leggings lunghi): discese, scivolate, risalite da terra. Con calma, un passaggio per volta, senza saltare niente."
+      },
+      {
+        "title": "Coreografia",
+        "text": "Una frase di trenta, quaranta secondi. Prima contata, poi in musica, poi ballata in piccoli gruppi. Sbagliare fa parte del programma."
+      },
+      {
+        "title": "Stretching e domande",
+        "text": "Si torna a terra, si allunga, si fanno domande. Ti dico com’è andata e cosa portare la volta dopo."
+      }
+    ],
+    "reassurance": "Non serve saper ballare. Non servono nemmeno le scarpe con il tacco: la prima volta vanno bene sneaker pulite o calzini. Se hai un tacco basso e spesso con il cinturino, portalo."
+  },
+  "about": {
+    "eyebrow": "Kristina",
+    "headline": "Chi ti aspetta in sala.",
+    "paragraphs": [
+      "Sono nata in Russia e vivo a Milano. [TODO: formazione di Kristina: dove ha studiato danza, con chi, in quali stili]. Insegno heels dance perché è la disciplina in cui tecnica e presenza si incontrano, e perché è quella in cui ho imparato di più.",
+      "Le mie lezioni partono dalla camminata, perché chi cammina bene balla meglio, e finiscono con una coreografia, perché è lì che si vede se hai ascoltato. Correggo molto, spiego di più. [TODO: percorso di Kristina come ballerina e insegnante, in una o due frasi]."
+    ],
+    "highlights": [
+      {
+        "label": "Formazione",
+        "value": "[TODO]"
+      },
+      {
+        "label": "Stili",
+        "value": "[TODO]"
+      },
+      {
+        "label": "Lingue della lezione",
+        "value": "[TODO]"
+      }
+    ],
+    "quote": "Si parte dal piede, si arriva allo sguardo."
+  },
+  "schedule": {
+    "eyebrow": "Orari",
+    "headline": "Quando.",
+    "note": "Orari di esempio, in aggiornamento: il calendario definitivo ti arriva con la conferma su WhatsApp. Posti limitati, prenotazione obbligatoria.",
+    "items": [
+      {
+        "day": "Martedì",
+        "time": "19:00–20:00",
+        "class": "Fondamenta",
+        "level": "Base"
+      },
+      {
+        "day": "Martedì",
+        "time": "20:15–21:15",
+        "class": "Open",
+        "level": "Tutti i livelli"
+      },
+      {
+        "day": "Giovedì",
+        "time": "19:30–20:30",
+        "class": "Coreografia",
+        "level": "Intermedio"
+      },
+      {
+        "day": "Sabato",
+        "time": "11:00–12:00",
+        "class": "Open",
+        "level": "Tutti i livelli"
+      },
+      {
+        "day": "Su appuntamento",
+        "time": "Da concordare",
+        "class": "Privata",
+        "level": "Su misura"
+      }
+    ]
+  },
+  "pricing": {
+    "eyebrow": "Prezzi",
+    "headline": "Quanto.",
+    "note": "Prezzi indicativi, in via di definizione. Le cifre definitive te le confermo su WhatsApp prima della tua prima lezione.",
+    "items": [
+      {
+        "name": "Lezione di prova",
+        "price": "15 €",
+        "detail": "Una lezione, qualsiasi livello. Vale una volta sola.",
+        "featured": false
+      },
+      {
+        "name": "Lezione singola",
+        "price": "22 €",
+        "detail": "Quando vuoi, senza vincoli. Prenota entro il giorno prima.",
+        "featured": false
+      },
+      {
+        "name": "Carnet 5 lezioni",
+        "price": "100 €",
+        "detail": "20 € a lezione. Validità 2 mesi.",
+        "featured": false
+      },
+      {
+        "name": "Carnet 10 lezioni",
+        "price": "180 €",
+        "detail": "18 € a lezione. Validità 4 mesi.",
+        "featured": true
+      },
+      {
+        "name": "Mensile",
+        "price": "75 €",
+        "detail": "Una lezione a settimana, quattro al mese, stesso corso.",
+        "featured": false
+      }
+    ],
+    "footnote": "[TODO: Metodi di pagamento: contanti, bonifico, altro.] [TODO: Eventuale tessera associativa e certificato medico: dipende dall’inquadramento dell’attività.] Le lezioni private hanno un prezzo a parte, su richiesta."
+  },
+  "location": {
+    "eyebrow": "Dove",
+    "headline": "Brera, Milano.",
+    "paragraphs": [
+      "Le lezioni si tengono in una sala del quartiere di Brera, tra le vie acciottolate, le gallerie e i cortili dell’Accademia. Una Milano più lenta, dove si cammina: il posto giusto per imparare a farlo sui tacchi.",
+      "L’indirizzo esatto ti arriva alla prenotazione, insieme all’orario e a cosa portare. Lo spazio non è una scuola con l’insegna: è una sala che, per il tempo della lezione, diventa nostra."
+    ],
+    "address_label": "[TODO: nome e indirizzo dello spazio]",
+    "address_note": "L’indirizzo esatto viene comunicato alla prenotazione.",
+    "directions": [
+      "Metro: Lanza M2, Cairoli M1, Montenapoleone M3. Da nord, Moscova M2 e poi corso Garibaldi. [TODO: verificare le fermate una volta noto l’indirizzo della sala]",
+      "Tram e bus fermano in via Cusani e in via Pontaccio: verifica le linee su atm.it, i percorsi cambiano con i cantieri. [TODO: verificare le vie delle fermate con l’indirizzo definitivo]",
+      "In auto no: Brera è dentro Area C e i parcheggi sono pochi. In bici o con BikeMi sì."
+    ],
+    "maps_cta": "Apri in Google Maps"
+  },
+  "gallery": {
+    "eyebrow": "La parete",
+    "headline": "Studio, Brera.",
+    "note": "Foto e video in arrivo — intanto, le opere."
+  },
+  "testimonials": {
+    "eyebrow": "Voci",
+    "headline": "Voci dalla sala.",
+    "placeholder_note": "Nota interna, non pubblica: questa sezione resta nascosta finché non ci sono recensioni vere, scritte da persone reali e autorizzate alla pubblicazione. Nessuna testimonianza inventata, nessun nome di fantasia."
+  },
+  "faq": {
+    "eyebrow": "Domande",
+    "headline": "Prima di venire.",
+    "items": [
+      {
+        "q": "Non ho mai ballato. Posso venire?",
+        "a": "Sì. Fondamenta e Open partono dalla camminata, non dalla coreografia. Non serve saper ballare. Serve voler provare."
+      },
+      {
+        "q": "Che scarpe servono?",
+        "a": "Per iniziare: tacco spesso o a blocco, 5–7 centimetri, con cinturino alla caviglia o allacciatura, suola sottile con un po’ di aderenza. Per ora meglio evitare tacchi a spillo e plateau molto alti, e lascia a casa le scarpe da sera: non sono fatte per muoversi. Ai tacchi alti e alle scarpe da danza vere e proprie si arriva dopo, quando la camminata è a posto. Se non hai ancora un paio adatto, vieni in sneaker o in calzini e lo compri dopo la prima lezione, quando sai cosa cercare."
+      },
+      {
+        "q": "Le ginocchiere servono davvero?",
+        "a": "Sì. Nel floorwork si sta in ginocchio, si scivola, si rotola. Consiglio ginocchiere da danza sottili, non quelle da pallavolo. Per la prima lezione bastano leggings lunghi che coprono il ginocchio."
+      },
+      {
+        "q": "Cosa mi metto?",
+        "a": "Qualcosa di aderente: leggings, shorts, body, top. Devo vedere le linee del corpo per correggerle. Evita i pantaloni larghi (il tacco ci resta impigliato), i gioielli ingombranti e le creme o gli oli sulla pelle prima della lezione. In borsa: scarpe, ginocchiere, acqua, un asciugamano."
+      },
+      {
+        "q": "È solo per donne?",
+        "a": "No. L’heels dance è per chiunque voglia salire sui tacchi: donne, uomini, persone di ogni genere, età e corpo. [TODO: confermare con Kristina se citare coreografi come Yanis Marshall o i Kazaky, che hanno portato gli uomini sui tacchi davanti al pubblico di mezzo mondo.] In sala conta la camminata, non l’anagrafe."
+      },
+      {
+        "q": "Ho paura di cadere.",
+        "a": "È normale, e si lavora proprio su questo. Si parte con un tacco basso e spesso, ci si scalda senza scarpe, si rinforzano gambe e caviglie. Nessuno ti chiede un tacco da dodici centimetri. Prima si impara a stare, poi a camminare, poi a ballare."
+      },
+      {
+        "q": "Devo essere sensuale?",
+        "a": "No. La sensualità, se arriva, è una conseguenza della tecnica, non un compito. In sala si lavora sul peso, sul core, sulle linee, sullo sguardo. Il resto viene da sé, e quanto mostrarne lo decidi tu."
+      },
+      {
+        "q": "In che lingua è la lezione?",
+        "a": "In italiano. Parlo anche inglese e russo e, quando serve, spiego nella lingua di chi ho davanti [TODO: confermare le lingue della lezione]. Se preferisci, scrivimi nella tua lingua: rispondo in tutte e tre."
+      },
+      {
+        "q": "Come prenoto, e se non posso venire?",
+        "a": "Scrivimi su WhatsApp: ti confermo posto, orario e indirizzo. I posti sono limitati, la prenotazione è obbligatoria. Se non puoi venire, avvisami il prima possibile [TODO: indicare le ore di preavviso richieste]. [TODO: politica di recupero della lezione, da concordare con Kristina]"
+      },
+      {
+        "q": "Serve un certificato medico?",
+        "a": "Dipende da com’è organizzata l’attività [TODO: libera professione o associazione sportiva]. Ti dico tutto alla prenotazione. In ogni caso, se hai avuto infortuni alle caviglie, alle ginocchia o alle anche, o se sei in gravidanza, parlane prima con il tuo medico e poi con me."
+      }
+    ]
+  },
+  "contact": {
+    "eyebrow": "Prenota",
+    "headline": "Vieni a provare.",
+    "text": "Un messaggio, e ti rispondo con posto, orario e indirizzo. Dimmi come ti chiami e se hai già ballato: il resto lo vediamo in sala.",
+    "whatsapp_cta": "Scrivimi su WhatsApp",
+    "whatsapp_prefilled": "Ciao Kristina, ho visto il sito e vorrei provare una lezione di heels dance a Brera. Mi chiamo [nome], livello [principiante/intermedio]. Quando posso venire?",
+    "instagram_cta": "Seguimi su Instagram",
+    "email_cta": "Scrivimi un’email [TODO: confermare se Kristina vuole pubblicare un indirizzo email; altrimenti rimuovere il pulsante]",
+    "response_note": "Rispondo di solito entro un giorno [TODO: confermare i tempi di risposta]. Durante le lezioni il telefono resta in borsa."
+  },
+  "footer": {
+    "tagline": "Heels dance a Brera, Milano. Tecnica. Presenza. Musicalità.",
+    "legal": "© 2026 Kristina · Heels dance · Brera, Milano [TODO: · P.IVA / C.F.]",
+    "privacy": "Questo sito non usa cookie, non ha moduli, non traccia le visite e non carica risorse da terze parti: le prenotazioni avvengono su WhatsApp e Instagram, secondo le rispettive informative.",
+    "credits": "Sito fatto a mano a Milano."
+  },
+  "ui": {
+    "lang_switch_label": "Lingua",
+    "menu_open": "Menu",
+    "menu_close": "Chiudi",
+    "example_badge": "Esempio, non definitivo",
+    "back_to_top": "Torna su",
+    "skip_link": "Vai al contenuto",
+    "photo_placeholder": "Foto in arrivo",
+    "video_placeholder": "Video in arrivo",
+    "nav_main": "Menu principale",
+    "nav_footer": "Menu del piè di pagina",
+    "gallery_label": "Galleria",
+    "col_day": "Giorno",
+    "col_time": "Ora",
+    "col_class": "Lezione",
+    "col_level": "Livello",
+    "col_plan": "Formula",
+    "col_price": "Prezzo",
+    "end": "fine"
+  },
+  "photos": {
+    "cap01": "Heels, Brera · anteprima",
+    "cap02": "Kristina — Ritratto",
+    "alt02": "Kristina, ritratto a mezza figura in luce calda",
+    "cap04": "Dettaglio, tacco · anteprima",
+    "cap05": "La classe · anteprima",
+    "cap06": "Mani · anteprima",
+    "cap07": "Brera, cortile · anteprima",
+    "cap08": "Brera, pianta indicativa",
+    "alt01": "Immagine dimostrativa generata al computer: Kristina in piedi sui tacchi, figura intera, in uno studio con pareti avorio",
+    "alt04": "Immagine dimostrativa generata: scarpe con tacco block e cinturino alla caviglia sul parquet, in posizione di bevel",
+    "alt05": "Immagine dimostrativa generata: una classe vista da dietro, in fila davanti allo specchio, durante la camminata sui tacchi",
+    "alt06": "Immagine dimostrativa generata: mani e braccia in una posa espressiva, senza volto",
+    "alt07": "Immagine dimostrativa generata: Kristina cammina sui tacchi in un cortile di ciottoli a Brera",
+    "demo_note": "Le immagini contrassegnate «anteprima» sono generate al computer a partire da una foto di Kristina: mostrano l’effetto finale e verranno sostituite dagli scatti veri."
+  }
+}
