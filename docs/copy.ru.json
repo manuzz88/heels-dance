@@ -333,7 +333,13 @@
     "col_level": "Уровень",
     "col_plan": "Тариф",
     "col_price": "Цена",
-    "end": "конец"
+    "end": "конец",
+    "widget_label": "Написать Кристине",
+    "widget_open": "Написать Кристине",
+    "widget_close": "Закрыть",
+    "widget_whatsapp": "WhatsApp",
+    "widget_telegram": "Telegram",
+    "widget_note": "Кристина ответит вам"
   },
   "photos": {
     "cap01": "Кристина — В зале",

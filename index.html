@@ -170,10 +170,10 @@ if (/^https?:$/.test(location.protocol)) {
              Con la foto vera: aggiungere class="has-media" alla figure, togliere aria-hidden dal div.hero__quadro e inserire prima del figcaption un <picture> come quello dello SLOT-02
              (file assets/img/kristina-lezione.jpg/.webp + -800, senza loading="lazy" e con fetchpriority="high": è nella prima schermata);
              alt e didascalia vivono nei dizionari (photos.alt01 da aggiungere / photos.cap01). Vedi docs/FOTO_DA_FORNIRE.md. -->
-        <figure class="hero__frame has-media" data-slot="01" data-ratio="4/5">
+        <figure class="hero__frame has-media" data-slot="01" data-ratio="2/3">
           <picture>
-<source type="image/webp" srcset="assets/img/kristina-lezione-800.webp 800w, assets/img/kristina-lezione.webp 720w" sizes="(min-width: 1024px) 22vw, 46vw">
-<img class="frame__media" src="assets/img/kristina-lezione.jpg" srcset="assets/img/kristina-lezione-800.jpg 800w, assets/img/kristina-lezione.jpg 720w" sizes="(min-width: 1024px) 22vw, 46vw" width="720" height="900" alt="Kristina in posa sui tacchi durante una lezione di heels dance" data-i18n-attr="alt:photos.alt01" fetchpriority="high" decoding="async" style="object-position: 50% 25%">
+<source type="image/webp" srcset="assets/img/kristina-lezione-800.webp 800w, assets/img/kristina-lezione.webp 900w" sizes="(min-width: 1024px) 22vw, 46vw">
+<img class="frame__media" src="assets/img/kristina-lezione.jpg" srcset="assets/img/kristina-lezione-800.jpg 800w, assets/img/kristina-lezione.jpg 900w" sizes="(min-width: 1024px) 22vw, 46vw" width="900" height="1350" alt="Kristina in posa sui tacchi durante una lezione di heels dance" data-i18n-attr="alt:photos.alt01" fetchpriority="high" decoding="async" style="object-position: 50% 50%">
 </picture>
 <figcaption class="cartellino"><span class="cartellino__n">n.01</span><span data-i18n="photos.cap01">Kristina — In sala</span></figcaption>
         </figure>
@@ -768,6 +768,25 @@ if (/^https?:$/.test(location.protocol)) {
     <div class="footer__end" aria-hidden="true"><span class="footer__fine" data-i18n="ui.end">fine</span></div>
   </div>
 </footer>
+
+<!-- Widget di contatto: pulsante fisso che apre WhatsApp o Telegram. Si nasconde da CONFIG.contacts.showContactWidget -->
+<div class="cw" id="cw" data-config-show="contact-widget" hidden>
+  <div class="cw__panel" id="cw-panel" hidden>
+    <p class="cw__note" data-i18n="ui.widget_note">Ti risponde Kristina</p>
+    <a class="cw__item cw__item--wa" data-config-href="whatsapp" data-config-show="whatsapp" href="#prenota">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-wa"/></svg>
+      <span data-i18n="ui.widget_whatsapp">WhatsApp</span>
+    </a>
+    <a class="cw__item cw__item--tg" data-config-href="telegram" data-config-show="telegram" href="#prenota">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21.6 4.3 2.9 11.5c-.9.35-.87 1.65.05 1.95l4.6 1.5 1.75 5.4c.25.75 1.2.95 1.75.4l2.5-2.5 4.6 3.4c.65.5 1.6.15 1.8-.65l3.2-15c.2-.9-.7-1.65-1.55-1.35Z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="m7.55 14.95 10.6-7.4-8.1 8.6-.15 3.9" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+      <span data-i18n="ui.widget_telegram">Telegram</span>
+    </a>
+  </div>
+  <button class="cw__toggle" id="cw-toggle" type="button" aria-expanded="false" aria-controls="cw-panel" aria-label="Scrivi a Kristina" data-i18n-attr="aria-label:ui.widget_label">
+    <svg class="cw__icon cw__icon--chat" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 9.3 9.3 0 0 1-2.9-.45L3.5 21l1.6-4.3A8.2 8.2 0 0 1 3.6 11.5 8.4 8.4 0 0 1 12.3 3.2 8.4 8.4 0 0 1 21 11.5Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+    <svg class="cw__icon cw__icon--close" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m6 6 12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+  </button>
+</div>
 
 <a href="#top" class="totop" id="totop" aria-label="Torna su" data-i18n-attr="aria-label:ui.back_to_top">
   <svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 14V3M3.5 7.5 8 3l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>

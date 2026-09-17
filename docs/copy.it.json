@@ -333,7 +333,13 @@
     "col_level": "Livello",
     "col_plan": "Formula",
     "col_price": "Prezzo",
-    "end": "fine"
+    "end": "fine",
+    "widget_label": "Scrivi a Kristina",
+    "widget_open": "Scrivi a Kristina",
+    "widget_close": "Chiudi",
+    "widget_whatsapp": "WhatsApp",
+    "widget_telegram": "Telegram",
+    "widget_note": "Ti risponde Kristina"
   },
   "photos": {
     "cap01": "Kristina — In sala",

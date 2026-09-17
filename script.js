@@ -18,7 +18,10 @@ const CONFIG = {
   },
 
   contacts: {
-    whatsappNumber: '',   // formato internazionale SENZA "+" né spazi, es. '393331234567'. Vuoto = i pulsanti WhatsApp rimandano alla sezione Prenota
+    whatsappNumber: '',   // formato internazionale SENZA "+" né spazi, es. '393331234567'. Vuoto = il widget e i pulsanti WhatsApp non pubblicano nessun numero
+    telegramUsername: '', // nome utente Telegram SENZA "@", es. 'kristina_heels'. Se vuoto si usa il numero qui sotto
+    telegramPhone: '',    // numero per Telegram, stesso formato del WhatsApp. Vuoto = il pulsante Telegram sparisce
+    showContactWidget: true,         // pulsante fisso in basso a destra per scrivere subito su WhatsApp/Telegram
     instagramHandle: '',  // senza "@", es. 'kristina.heels'. Vuoto = i link Instagram rimandano alla sezione Prenota
     email: ''             // es. 'ciao@esempio.it'. Vuoto = il pulsante email compare solo in sviluppo (con [TODO]) e sparisce in produzione
   },
@@ -440,7 +443,13 @@ const I18N = {
       "col_level": "Livello",
       "col_plan": "Formula",
       "col_price": "Prezzo",
-      "end": "fine"
+      "end": "fine",
+      "widget_label": "Scrivi a Kristina",
+      "widget_open": "Scrivi a Kristina",
+      "widget_close": "Chiudi",
+      "widget_whatsapp": "WhatsApp",
+      "widget_telegram": "Telegram",
+      "widget_note": "Ti risponde Kristina"
     },
     "photos": {
       "cap01": "Kristina — In sala",
@@ -792,7 +801,13 @@ const I18N = {
       "col_level": "Level",
       "col_plan": "Plan",
       "col_price": "Price",
-      "end": "the end"
+      "end": "the end",
+      "widget_label": "Message Kristina",
+      "widget_open": "Message Kristina",
+      "widget_close": "Close",
+      "widget_whatsapp": "WhatsApp",
+      "widget_telegram": "Telegram",
+      "widget_note": "Kristina answers you"
     },
     "photos": {
       "cap01": "Kristina — In the studio",
@@ -1144,7 +1159,13 @@ const I18N = {
       "col_level": "Уровень",
       "col_plan": "Тариф",
       "col_price": "Цена",
-      "end": "конец"
+      "end": "конец",
+      "widget_label": "Написать Кристине",
+      "widget_open": "Написать Кристине",
+      "widget_close": "Закрыть",
+      "widget_whatsapp": "WhatsApp",
+      "widget_telegram": "Telegram",
+      "widget_note": "Кристина ответит вам"
     },
     "photos": {
       "cap01": "Кристина — В зале",
@@ -1270,6 +1291,12 @@ const I18N = {
     if (!n) return '#prenota';
     const msg = stripTodos(names(get(I18N[l || lang], 'contact.whatsapp_prefilled') || ''));
     return 'https://wa.me/' + n + '?text=' + encodeURIComponent(msg);
+  }
+  function telegramHref() {
+    const u = String(CONFIG.contacts.telegramUsername || '').replace(/^@/, '').trim();
+    if (u) return 'https://t.me/' + encodeURIComponent(u);
+    const n = String(CONFIG.contacts.telegramPhone || '').replace(/\D/g, '');
+    return n ? 'https://t.me/+' + n : '';
   }
   function instagramHref() {
     const h = String(CONFIG.contacts.instagramHandle || '').replace(/^@/, '').trim();
@@ -1447,6 +1474,11 @@ const I18N = {
 
   function applyContacts() {
     $$('[data-config-href="instagram"]').forEach(a => { a.setAttribute('href', instagramHref()); setExternal(a, !!CONFIG.contacts.instagramHandle); });
+    $$('[data-config-href="telegram"]').forEach(a => { const h = telegramHref(); a.setAttribute('href', h || '#prenota'); setExternal(a, !!h); });
+    $$('[data-config-show="telegram"]').forEach(el => { el.hidden = !telegramHref(); });
+    $$('[data-config-show="contact-widget"]').forEach(el => {
+      el.hidden = CONFIG.contacts.showContactWidget === false || (!CONFIG.contacts.whatsappNumber && !telegramHref());
+    });
     $$('[data-config-href="maps"]').forEach(a => { a.setAttribute('href', mapsHref()); setExternal(a, true); });
     const email = String(CONFIG.contacts.email || '').trim();
     $$('[data-config-href="email"]').forEach(a => { a.setAttribute('href', email ? 'mailto:' + email : '#prenota'); setExternal(a, false); });
@@ -1889,6 +1921,27 @@ const I18N = {
   if (CONFIG.showTodos) window.HD = { CONFIG: CONFIG, I18N: I18N, applyLang: applyLang, stripTodos: stripTodos };
 
   /* ---------- avvio ---------- */
+
+  /* ---------- widget di contatto (WhatsApp / Telegram) ---------- */
+  function initContactWidget() {
+    const wrap = $('#cw'), btn = $('#cw-toggle'), panel = $('#cw-panel');
+    if (!wrap || !btn || !panel) return;
+    function close() { panel.hidden = true; btn.setAttribute('aria-expanded', 'false'); }
+    function open() {
+      panel.hidden = false; btn.setAttribute('aria-expanded', 'true');
+      const first = panel.querySelector('a:not([hidden])');
+      if (first) first.focus();
+    }
+    btn.addEventListener('click', () => { panel.hidden ? open() : close(); });
+    doc.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && !panel.hidden) { close(); btn.focus(); }
+    });
+    doc.addEventListener('click', e => {
+      if (!panel.hidden && !wrap.contains(e.target)) close();
+    });
+    panel.addEventListener('click', e => { if (e.target.closest('a')) close(); });
+  }
+
   function init() {
     applyConfig();
     initPause();
@@ -1898,6 +1951,7 @@ const I18N = {
     initHero();
     initReveal();
     initScroll();
+    initContactWidget();
     positionLangInks();
     updateWallFocus();
     if (doc.fonts && doc.fonts.ready) doc.fonts.ready.then(() => { buildMarquees(); positionLangInks(); });

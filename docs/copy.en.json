@@ -333,7 +333,13 @@
     "col_level": "Level",
     "col_plan": "Plan",
     "col_price": "Price",
-    "end": "the end"
+    "end": "the end",
+    "widget_label": "Message Kristina",
+    "widget_open": "Message Kristina",
+    "widget_close": "Close",
+    "widget_whatsapp": "WhatsApp",
+    "widget_telegram": "Telegram",
+    "widget_note": "Kristina answers you"
   },
   "photos": {
     "cap01": "Kristina — In the studio",

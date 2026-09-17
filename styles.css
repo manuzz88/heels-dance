@@ -1605,3 +1605,45 @@ html:not(.js) .totop { opacity: 1; visibility: visible; transform: none; }
 }
 /* Ritratto e foto della parete: ombra appena accennata per staccarle dal fondo avorio */
 .frame.has-media { box-shadow: 0 1px 0 rgba(30, 28, 26, .06); }
+
+/* La cornice dell'hero segue la proporzione della foto (2:3): la figura intera, tacchi compresi */
+.hero__frame[data-ratio="2/3"] { aspect-ratio: 2 / 3; }
+.frame[data-ratio="2/3"] { aspect-ratio: 2 / 3; }
+
+/* ---------- Widget di contatto (WhatsApp / Telegram) ---------- */
+.cw { position: fixed; right: 16px; bottom: 16px; z-index: 46; display: flex; flex-direction: column; align-items: flex-end; gap: 10px; }
+.cw__toggle {
+  width: 52px; height: 52px; flex: none; display: inline-flex; align-items: center; justify-content: center;
+  background: var(--c-minio); color: var(--c-avorio); border: 1px solid var(--c-minio); cursor: pointer;
+  box-shadow: 0 2px 10px rgba(30, 28, 26, .16); transition: background .2s, transform .2s var(--ease);
+}
+.cw__toggle:hover { background: var(--c-minio-scuro, #9C2612); }
+.cw__toggle:active { transform: translateY(1px); }
+.cw__icon { width: 22px; height: 22px; }
+.cw__icon--close { display: none; }
+.cw__toggle[aria-expanded="true"] .cw__icon--chat { display: none; }
+.cw__toggle[aria-expanded="true"] .cw__icon--close { display: block; }
+.cw__panel {
+  display: flex; flex-direction: column; gap: 1px; min-width: 210px;
+  background: var(--c-filetto, #CFC7B9); border: 1px solid var(--c-antracite);
+  box-shadow: 0 4px 18px rgba(30, 28, 26, .14);
+}
+.cw__note {
+  margin: 0; padding: 10px 14px; background: var(--c-lino); color: var(--c-fumo);
+  font-size: .6875rem; letter-spacing: .10em; text-transform: uppercase;
+}
+.cw__item {
+  display: flex; align-items: center; gap: 12px; padding: 13px 14px; min-height: 48px;
+  background: var(--c-avorio); color: var(--c-antracite); text-decoration: none;
+  font-weight: 500; font-size: .9375rem; transition: background .15s;
+}
+.cw__item:hover { background: var(--c-lino); }
+.cw__item svg { width: 20px; height: 20px; flex: none; color: var(--c-minio); }
+.cw__item[hidden] { display: none; }
+/* il "torna su" sale sopra il widget per non sovrapporsi */
+.totop { bottom: 80px; }
+@media (min-width: 1024px) {
+  .cw { right: 24px; bottom: 24px; }
+  .totop { right: 24px; bottom: 88px; }
+}
+@media (prefers-reduced-motion: reduce) { .cw__toggle { transition: none; } }
