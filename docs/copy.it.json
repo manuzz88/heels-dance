@@ -246,7 +246,7 @@
   "gallery": {
     "eyebrow": "La parete",
     "headline": "Studio, Brera.",
-    "note": "Foto e video in arrivo — intanto, le opere."
+    "note": "Primi scatti in sala. Altre foto e un video in arrivo."
   },
   "testimonials": {
     "eyebrow": "Voci",
@@ -336,19 +336,17 @@
     "end": "fine"
   },
   "photos": {
-    "cap01": "Heels, Brera · anteprima",
+    "cap01": "Kristina — In sala",
     "cap02": "Kristina — Ritratto",
     "alt02": "Kristina, ritratto a mezza figura in luce calda",
-    "cap04": "Dettaglio, tacco · anteprima",
-    "cap05": "La classe · anteprima",
-    "cap06": "Mani · anteprima",
-    "cap07": "Brera, cortile · anteprima",
-    "cap08": "Brera, pianta indicativa",
-    "alt01": "Immagine dimostrativa generata al computer: Kristina in piedi sui tacchi, figura intera, in uno studio con pareti avorio",
-    "alt04": "Immagine dimostrativa generata: scarpe con tacco block e cinturino alla caviglia sul parquet, in posizione di bevel",
-    "alt05": "Immagine dimostrativa generata: una classe vista da dietro, in fila davanti allo specchio, durante la camminata sui tacchi",
-    "alt06": "Immagine dimostrativa generata: mani e braccia in una posa espressiva, senza volto",
-    "alt07": "Immagine dimostrativa generata: Kristina cammina sui tacchi in un cortile di ciottoli a Brera",
-    "demo_note": "Le immagini contrassegnate «anteprima» sono generate al computer a partire da una foto di Kristina: mostrano l’effetto finale e verranno sostituite dagli scatti veri."
+    "cap04": "Dettaglio — Tacchi e ginocchiere",
+    "cap05": "In sala — La camminata",
+    "cap06": "Dettaglio — La posa",
+    "cap08": "Brera · Milano",
+    "alt01": "Kristina in posa sui tacchi durante una lezione di heels dance",
+    "alt04": "Stivaletti col tacco e ginocchiere sul parquet, durante la camminata",
+    "alt05": "Gambe sui tacchi durante la camminata, sul parquet della sala",
+    "alt06": "Dettaglio della posa, mano sul fianco, senza volto",
+    "alt08": "Pianta astratta del quartiere di Brera"
   }
 }

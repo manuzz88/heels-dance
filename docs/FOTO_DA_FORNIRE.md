@@ -90,19 +90,24 @@ segnaposto: alla prima foto togliere `aria-hidden` dal `div.wall` e dalle singol
 - Pesare i file: ogni foto sotto i 400 KB, il video sotto i 3 MB.
 
 
-## Stato attuale delle cornici (11 settembre 2026)
+## Stato attuale delle cornici (17 settembre 2026)
 
-| Slot | Stato | File in `assets/img/` | Da fare prima del lancio |
+Tutte le immagini pubblicate sono **fotografie vere** scattate in sala. Le immagini generate usate come demo
+l'11 settembre sono state rimosse dal sito e dai file.
+
+| Slot | Stato | File in `assets/img/` | Da fare |
 |---|---|---|---|
-| SLOT-01 hero | immagine GENERATA da una foto di Kristina (demo) | `kristina-hero.*` | sostituire con uno scatto vero a figura intera sui tacchi (4:5, min 1200×1500) |
-| SLOT-02 ritratto | FOTO REALE di Kristina (fornita da Manuel) | `kristina-ritratto-1600.*` | opzionale: ritratto in studio con luce laterale |
-| SLOT-03 video | segnaposto | — | video 9:16 di 6–10 s, muto |
-| SLOT-04 dettaglio scarpe | immagine GENERATA (demo) | `kristina-scarpe.*` | scatto vero: scarpe sul parquet, bevel |
-| SLOT-05 la classe | immagine GENERATA (demo) | `kristina-classe.*` | scatto vero della classe da dietro (con consenso delle persone) |
-| SLOT-06 mani | immagine GENERATA (demo) | `kristina-mani.*` | scatto vero, dettaglio mani/braccia |
-| SLOT-07 Brera | immagine GENERATA (demo) | `kristina-brera.*` | scatto vero in un cortile di Brera |
+| SLOT-01 hero | foto reale: Kristina in sala, profilo | `kristina-lezione.*` | eventuale scatto dedicato a figura intera (4:5, min 1200×1500) |
+| SLOT-02 ritratto | foto reale: ritratto a mezza figura | `kristina-ritratto-1600.*` | nulla |
+| SLOT-03 video | segnaposto di design | — | video 9:16 di 6–10 s, muto |
+| SLOT-04 dettaglio | foto reale: tacchi e ginocchiere sul parquet | `kristina-tacchi.*` | nulla |
+| SLOT-05 camminata | foto reale: gambe sui tacchi in camminata | `kristina-camminata.*` | nulla |
+| SLOT-06 posa | foto reale: dettaglio della posa, senza volto | `kristina-posa.*` | nulla |
+| SLOT-07 Brera | segnaposto di design | — | scatto orizzontale 3:2 in un cortile di Brera |
 
-Le immagini generate servono solo a mostrare l'effetto finale del sito: Kristina deve approvarle prima di qualunque condivisione
-pubblica, e vanno sostituite dagli scatti veri appena disponibili. Per sostituire un'immagine basta salvare i nuovi file con lo
-stesso nome (`.jpg` e `.webp`, più la versione `-800`) oppure cambiare i percorsi nel `<picture>` dello slot in `index.html`.
-Le didascalie e i testi alternativi delle foto stanno nei dizionari sotto la chiave `photos` (in `script.js` e in `docs/copy.*.json`).
+Due note importanti:
+
+- Le foto degli scatti in sala ritraggono anche altre persone. I ritagli pubblicati escludono i volti di terzi:
+  se in futuro si pubblicano immagini in cui altre allieve sono riconoscibili, serve il loro consenso.
+- Per sostituire una foto basta salvare i nuovi file con lo stesso nome (`.jpg`, `.webp` e la versione `-800`).
+  Didascalie e testi alternativi stanno nei dizionari sotto la chiave `photos` (in `script.js` e in `docs/copy.*.json`).

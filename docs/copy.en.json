@@ -246,7 +246,7 @@
   "gallery": {
     "eyebrow": "The wall",
     "headline": "Studio, Brera.",
-    "note": "Photos and video coming soon — the artworks, for now."
+    "note": "First shots from the studio. More photos and a video coming soon."
   },
   "testimonials": {
     "eyebrow": "Voices",
@@ -336,19 +336,17 @@
     "end": "the end"
   },
   "photos": {
-    "cap01": "Heels, Brera · preview",
+    "cap01": "Kristina — In the studio",
     "cap02": "Kristina — Portrait",
     "alt02": "Kristina, half-length portrait in warm light",
-    "cap04": "Detail, heel · preview",
-    "cap05": "The class · preview",
-    "cap06": "Hands · preview",
-    "cap07": "Brera, courtyard · preview",
-    "cap08": "Brera, schematic map",
-    "alt01": "Computer-generated preview image: Kristina standing in heels, full figure, in a studio with ivory walls",
-    "alt04": "Computer-generated preview image: block-heel ankle-strap shoes on a wooden floor, in bevel position",
-    "alt05": "Computer-generated preview image: a class seen from behind, in a line facing the mirror, during heel walks",
-    "alt06": "Computer-generated preview image: hands and arms in an expressive pose, face not visible",
-    "alt07": "Computer-generated preview image: Kristina walking in heels across a cobblestone courtyard in Brera",
-    "demo_note": "Images marked “preview” are computer-generated from a photo of Kristina: they show the intended look and will be replaced by real photographs."
+    "cap04": "Detail — Heels and knee pads",
+    "cap05": "In the studio — The walk",
+    "cap06": "Detail — The pose",
+    "cap08": "Brera · Milan",
+    "alt01": "Kristina posing in heels during a heels dance class",
+    "alt04": "Heeled ankle boots and knee pads on the wooden floor, during the walk",
+    "alt05": "Legs in heels during the walk, on the studio floor",
+    "alt06": "Close-up of the pose, hand on the hip, face not visible",
+    "alt08": "Abstract map of the Brera district"
   }
 }

@@ -56,15 +56,11 @@ docs/
 
 ## Immagini (stato attuale)
 
-Il sito è già completo di immagini, ma solo una è una fotografia vera:
-
-- **Ritratto nella sezione «Chi insegna»**: foto reale di Kristina (`assets/img/kristina-ritratto-1600.*`).
-- **Hero e «parete» (5 cornici)**: immagini **generate al computer** a partire da quella foto, per mostrare
-  l'effetto finale del sito. Sono marcate «· anteprima» nella didascalia, l'attributo `alt` lo dichiara nelle
-  tre lingue e una nota sotto la parete lo spiega a chi legge (la nota sparisce con `showTodos: false`).
-- Prima di qualunque diffusione pubblica: farle approvare a Kristina e sostituirle con scatti veri.
-  Per sostituirne una basta salvare i nuovi file con lo stesso nome (`.jpg`, `.webp` e la versione `-800`).
-- Esiste anche una variante generata del ritratto in studio (`kristina-ritratto-studio.*`), non usata.
+Tutte le immagini del sito sono **fotografie vere**: il ritratto nella sezione «Chi insegna»
+(`kristina-ritratto-1600.*`) e quattro scatti in sala (`kristina-lezione`, `kristina-tacchi`,
+`kristina-camminata`, `kristina-posa`). Le immagini generate al computer usate nella prima demo sono
+state rimosse. Restano segnaposto di design due cornici: il video 9:16 e lo scatto orizzontale a Brera.
+Dettagli e istruzioni per sostituirle: `docs/FOTO_DA_FORNIRE.md`.
 
 ## Prima del lancio
 

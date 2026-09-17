@@ -353,7 +353,7 @@ const I18N = {
     "gallery": {
       "eyebrow": "La parete",
       "headline": "Studio, Brera.",
-      "note": "Foto e video in arrivo — intanto, le opere."
+      "note": "Primi scatti in sala. Altre foto e un video in arrivo."
     },
     "testimonials": {
       "eyebrow": "Voci",
@@ -443,20 +443,18 @@ const I18N = {
       "end": "fine"
     },
     "photos": {
-      "cap01": "Heels, Brera · anteprima",
+      "cap01": "Kristina — In sala",
       "cap02": "Kristina — Ritratto",
       "alt02": "Kristina, ritratto a mezza figura in luce calda",
-      "cap04": "Dettaglio, tacco · anteprima",
-      "cap05": "La classe · anteprima",
-      "cap06": "Mani · anteprima",
-      "cap07": "Brera, cortile · anteprima",
-      "cap08": "Brera, pianta indicativa",
-      "alt01": "Immagine dimostrativa generata al computer: Kristina in piedi sui tacchi, figura intera, in uno studio con pareti avorio",
-      "alt04": "Immagine dimostrativa generata: scarpe con tacco block e cinturino alla caviglia sul parquet, in posizione di bevel",
-      "alt05": "Immagine dimostrativa generata: una classe vista da dietro, in fila davanti allo specchio, durante la camminata sui tacchi",
-      "alt06": "Immagine dimostrativa generata: mani e braccia in una posa espressiva, senza volto",
-      "alt07": "Immagine dimostrativa generata: Kristina cammina sui tacchi in un cortile di ciottoli a Brera",
-      "demo_note": "Le immagini contrassegnate «anteprima» sono generate al computer a partire da una foto di Kristina: mostrano l’effetto finale e verranno sostituite dagli scatti veri."
+      "cap04": "Dettaglio — Tacchi e ginocchiere",
+      "cap05": "In sala — La camminata",
+      "cap06": "Dettaglio — La posa",
+      "cap08": "Brera · Milano",
+      "alt01": "Kristina in posa sui tacchi durante una lezione di heels dance",
+      "alt04": "Stivaletti col tacco e ginocchiere sul parquet, durante la camminata",
+      "alt05": "Gambe sui tacchi durante la camminata, sul parquet della sala",
+      "alt06": "Dettaglio della posa, mano sul fianco, senza volto",
+      "alt08": "Pianta astratta del quartiere di Brera"
     }
   },
   "en": {
@@ -707,7 +705,7 @@ const I18N = {
     "gallery": {
       "eyebrow": "The wall",
       "headline": "Studio, Brera.",
-      "note": "Photos and video coming soon — the artworks, for now."
+      "note": "First shots from the studio. More photos and a video coming soon."
     },
     "testimonials": {
       "eyebrow": "Voices",
@@ -797,20 +795,18 @@ const I18N = {
       "end": "the end"
     },
     "photos": {
-      "cap01": "Heels, Brera · preview",
+      "cap01": "Kristina — In the studio",
       "cap02": "Kristina — Portrait",
       "alt02": "Kristina, half-length portrait in warm light",
-      "cap04": "Detail, heel · preview",
-      "cap05": "The class · preview",
-      "cap06": "Hands · preview",
-      "cap07": "Brera, courtyard · preview",
-      "cap08": "Brera, schematic map",
-      "alt01": "Computer-generated preview image: Kristina standing in heels, full figure, in a studio with ivory walls",
-      "alt04": "Computer-generated preview image: block-heel ankle-strap shoes on a wooden floor, in bevel position",
-      "alt05": "Computer-generated preview image: a class seen from behind, in a line facing the mirror, during heel walks",
-      "alt06": "Computer-generated preview image: hands and arms in an expressive pose, face not visible",
-      "alt07": "Computer-generated preview image: Kristina walking in heels across a cobblestone courtyard in Brera",
-      "demo_note": "Images marked “preview” are computer-generated from a photo of Kristina: they show the intended look and will be replaced by real photographs."
+      "cap04": "Detail — Heels and knee pads",
+      "cap05": "In the studio — The walk",
+      "cap06": "Detail — The pose",
+      "cap08": "Brera · Milan",
+      "alt01": "Kristina posing in heels during a heels dance class",
+      "alt04": "Heeled ankle boots and knee pads on the wooden floor, during the walk",
+      "alt05": "Legs in heels during the walk, on the studio floor",
+      "alt06": "Close-up of the pose, hand on the hip, face not visible",
+      "alt08": "Abstract map of the Brera district"
     }
   },
   "ru": {
@@ -1061,7 +1057,7 @@ const I18N = {
     "gallery": {
       "eyebrow": "Стена",
       "headline": "Студия, Брера.",
-      "note": "Фото и видео скоро — а пока здесь работы."
+      "note": "Первые снимки из зала. Скоро ещё фотографии и видео."
     },
     "testimonials": {
       "eyebrow": "Отзывы",
@@ -1151,20 +1147,18 @@ const I18N = {
       "end": "конец"
     },
     "photos": {
-      "cap01": "Хилс, Брера · превью",
+      "cap01": "Кристина — В зале",
       "cap02": "Кристина — Портрет",
       "alt02": "Кристина, поясной портрет в тёплом свете",
-      "cap04": "Деталь, каблук · превью",
-      "cap05": "Группа · превью",
-      "cap06": "Руки · превью",
-      "cap07": "Брера, дворик · превью",
-      "cap08": "Брера, схематичная карта",
-      "alt01": "Сгенерированное демонстрационное изображение: Кристина стоит на каблуках в полный рост в студии со стенами цвета слоновой кости",
-      "alt04": "Сгенерированное демонстрационное изображение: туфли на устойчивом каблуке с ремешком на паркете, в позиции бевел",
-      "alt05": "Сгенерированное демонстрационное изображение: группа со спины, в ряд перед зеркалом, во время проходок на каблуках",
-      "alt06": "Сгенерированное демонстрационное изображение: руки в выразительной позе, лицо не видно",
-      "alt07": "Сгенерированное демонстрационное изображение: Кристина идёт на каблуках по мощёному дворику в Брере",
-      "demo_note": "Изображения с пометкой «превью» сгенерированы компьютером по фотографии Кристины: они показывают задуманный вид сайта и будут заменены настоящими снимками."
+      "cap04": "Деталь — Каблуки и наколенники",
+      "cap05": "В зале — Проходка",
+      "cap06": "Деталь — Поза",
+      "cap08": "Брера · Милан",
+      "alt01": "Кристина в позе на каблуках во время занятия heels dance",
+      "alt04": "Ботильоны на каблуке и наколенники на паркете во время проходки",
+      "alt05": "Ноги на каблуках во время проходки, на паркете зала",
+      "alt06": "Крупный план позы, рука на бедре, лицо не видно",
+      "alt08": "Абстрактная схема квартала Брера"
     }
   }
 };
