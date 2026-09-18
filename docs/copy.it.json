@@ -14,7 +14,8 @@
     "location": "Dove",
     "faq": "Domande",
     "contact": "Contatti",
-    "book": "Prenota"
+    "book": "Prenota",
+    "dates": "Date"
   },
   "hero": {
     "eyebrow": "Heels dance · Milano, Brera",
@@ -354,5 +355,45 @@
     "alt05": "Gambe sui tacchi durante la camminata, sul parquet della sala",
     "alt06": "Dettaglio della posa, mano sul fianco, senza volto",
     "alt08": "Pianta astratta del quartiere di Brera"
+  },
+  "dates": {
+    "eyebrow": "Prossime date",
+    "headline": "Le prossime date.",
+    "intro": "Workshop e lezioni si prenotano a data singola: scegli quella che ti va bene e scrivimi. Non serve iscriversi a un corso.",
+    "note": "Date di esempio, non ancora definitive. Il calendario vero arriva appena è confermato: intanto scrivimi e ti avviso per prima.",
+    "empty": "Al momento non c’è una data aperta. Scrivimi su WhatsApp: ti avviso appena esce la prossima.",
+    "cta": "Prenota questa data",
+    "types": {
+      "workshop": "Workshop",
+      "lesson": "Lezione",
+      "private": "Privata"
+    },
+    "status": {
+      "open": "Posti disponibili",
+      "last": "Ultimi posti",
+      "full": "Esaurito"
+    },
+    "examples": [
+      {
+        "type": "workshop",
+        "date": "2026-10-04",
+        "time": "15:00–18:00",
+        "title": "Heels choreo",
+        "level": "Open level",
+        "duration": "3 h",
+        "price": "35 €",
+        "status": "open"
+      },
+      {
+        "type": "lesson",
+        "date": "2026-10-15",
+        "time": "19:00–20:00",
+        "title": "Fondamenta",
+        "level": "Base",
+        "duration": "60 min",
+        "price": "22 €",
+        "status": "last"
+      }
+    ]
   }
 }

@@ -33,6 +33,25 @@ const CONFIG = {
     mapsQuery: 'Brera, Milano'  // testo cercato dal link "Apri in Google Maps", es. 'Studio Brera, Via Brera 1, Milano'
   },
 
+  // PROSSIME DATE · workshop e lezioni a data singola. È la sezione che conviene tenere aggiornata:
+  // basta aggiungere o togliere una riga qui sotto. Se l'elenco è vuoto la sezione mostra
+  // "scrivimi e ti avviso appena esce la prossima data".
+  // Metti upcomingConfirmed: true quando le righe sono vere (sparisce il badge "Esempio"
+  // e le date vengono dichiarate a Google come eventi).
+  //   type   → 'workshop' | 'lesson' | 'private'
+  //   date   → 'AAAA-MM-GG' (il giorno della settimana viene scritto da solo, tradotto)
+  //   time   → '15:00–18:00'
+  //   title  → titolo libero, es. 'Heels choreo · Beyoncé'
+  //   level  → 'Open level', 'Base', 'Intermedio'…
+  //   price  → '35 €'  ·  duration → '3 h'  ·  status → 'open' | 'last' | 'full'
+  //   place  → facoltativo: se vuoto si usa la zona indicata in venue
+  upcomingConfirmed: false,
+  upcoming: [],
+
+  // Corso settimanale: metti false se per ora Kristina lavora solo con workshop e lezioni singole.
+  // A false la sezione "Orari" sparisce del tutto (nav compresa) e restano le Prossime date.
+  showWeeklySchedule: true,
+
   // ORARI · finché scheduleConfirmed è false la tabella mostra le righe di ESEMPIO dei dizionari con il badge "Esempio".
   // Quando gli orari sono definitivi: scheduleConfirmed: true e una riga per classe in schedule, ad esempio
   //   { day: 'tue', time: '19:00–20:00', classIndex: 0 }
@@ -97,9 +116,9 @@ const VAT_LABEL = { it: '· P.IVA ', en: '· VAT ', ru: '· P.IVA ' };
 
 /* La parola in corsivo di ogni titolo (brief §9.4): il testo resta quello dei dizionari, qui si indica solo quale parola va in <em>. */
 const EMPHASIS = {
-  it: { 'manifesto.headline': 'abitano', 'classes.headline': 'formule', 'first_class.headline': 'prima', 'about.headline': 'aspetta', 'schedule.headline': 'Quando.', 'pricing.headline': 'Quanto.', 'location.headline': 'Milano', 'testimonials.headline': 'sala', 'faq.headline': 'venire', 'contact.headline': 'provare' },
-  en: { 'manifesto.headline': 'inhabit', 'classes.headline': 'formats', 'first_class.headline': 'first', 'about.headline': 'waiting', 'schedule.headline': 'When.', 'pricing.headline': 'much', 'location.headline': 'Milan', 'testimonials.headline': 'studio', 'faq.headline': 'come', 'contact.headline': 'try' },
-  ru: { 'manifesto.headline': 'живут', 'classes.headline': 'формата', 'first_class.headline': 'первое', 'about.headline': 'ждёт', 'schedule.headline': 'Когда.', 'pricing.headline': 'Сколько.', 'location.headline': 'Милан', 'testimonials.headline': 'зала', 'faq.headline': 'прийти', 'contact.headline': 'попробовать' }
+  it: { 'dates.headline': 'date.', 'manifesto.headline': 'abitano', 'classes.headline': 'formule', 'first_class.headline': 'prima', 'about.headline': 'aspetta', 'schedule.headline': 'Quando.', 'pricing.headline': 'Quanto.', 'location.headline': 'Milano', 'testimonials.headline': 'sala', 'faq.headline': 'venire', 'contact.headline': 'provare' },
+  en: { 'dates.headline': 'dates.', 'manifesto.headline': 'inhabit', 'classes.headline': 'formats', 'first_class.headline': 'first', 'about.headline': 'waiting', 'schedule.headline': 'When.', 'pricing.headline': 'much', 'location.headline': 'Milan', 'testimonials.headline': 'studio', 'faq.headline': 'come', 'contact.headline': 'try' },
+  ru: { 'dates.headline': 'даты.', 'manifesto.headline': 'живут', 'classes.headline': 'формата', 'first_class.headline': 'первое', 'about.headline': 'ждёт', 'schedule.headline': 'Когда.', 'pricing.headline': 'Сколько.', 'location.headline': 'Милан', 'testimonials.headline': 'зала', 'faq.headline': 'прийти', 'contact.headline': 'попробовать' }
 };
 
 /* ============================================================
@@ -124,7 +143,8 @@ const I18N = {
       "location": "Dove",
       "faq": "Domande",
       "contact": "Contatti",
-      "book": "Prenota"
+      "book": "Prenota",
+      "dates": "Date"
     },
     "hero": {
       "eyebrow": "Heels dance · Milano, Brera",
@@ -464,6 +484,46 @@ const I18N = {
       "alt05": "Gambe sui tacchi durante la camminata, sul parquet della sala",
       "alt06": "Dettaglio della posa, mano sul fianco, senza volto",
       "alt08": "Pianta astratta del quartiere di Brera"
+    },
+    "dates": {
+      "eyebrow": "Prossime date",
+      "headline": "Le prossime date.",
+      "intro": "Workshop e lezioni si prenotano a data singola: scegli quella che ti va bene e scrivimi. Non serve iscriversi a un corso.",
+      "note": "Date di esempio, non ancora definitive. Il calendario vero arriva appena è confermato: intanto scrivimi e ti avviso per prima.",
+      "empty": "Al momento non c’è una data aperta. Scrivimi su WhatsApp: ti avviso appena esce la prossima.",
+      "cta": "Prenota questa data",
+      "types": {
+        "workshop": "Workshop",
+        "lesson": "Lezione",
+        "private": "Privata"
+      },
+      "status": {
+        "open": "Posti disponibili",
+        "last": "Ultimi posti",
+        "full": "Esaurito"
+      },
+      "examples": [
+        {
+          "type": "workshop",
+          "date": "2026-10-04",
+          "time": "15:00–18:00",
+          "title": "Heels choreo",
+          "level": "Open level",
+          "duration": "3 h",
+          "price": "35 €",
+          "status": "open"
+        },
+        {
+          "type": "lesson",
+          "date": "2026-10-15",
+          "time": "19:00–20:00",
+          "title": "Fondamenta",
+          "level": "Base",
+          "duration": "60 min",
+          "price": "22 €",
+          "status": "last"
+        }
+      ]
     }
   },
   "en": {
@@ -482,7 +542,8 @@ const I18N = {
       "location": "Where",
       "faq": "FAQ",
       "contact": "Contact",
-      "book": "Book"
+      "book": "Book",
+      "dates": "Dates"
     },
     "hero": {
       "eyebrow": "Heels dance · Milan, Brera",
@@ -822,6 +883,46 @@ const I18N = {
       "alt05": "Legs in heels during the walk, on the studio floor",
       "alt06": "Close-up of the pose, hand on the hip, face not visible",
       "alt08": "Abstract map of the Brera district"
+    },
+    "dates": {
+      "eyebrow": "Upcoming dates",
+      "headline": "Upcoming dates.",
+      "intro": "Workshops and classes are booked one date at a time: pick the one that works for you and write to me. No course sign-up needed.",
+      "note": "Sample dates, not final yet. The real calendar comes as soon as it is confirmed: write to me and you will be the first to know.",
+      "empty": "No open date at the moment. Write to me on WhatsApp and I will let you know as soon as the next one is out.",
+      "cta": "Book this date",
+      "types": {
+        "workshop": "Workshop",
+        "lesson": "Class",
+        "private": "Private"
+      },
+      "status": {
+        "open": "Places available",
+        "last": "Last places",
+        "full": "Sold out"
+      },
+      "examples": [
+        {
+          "type": "workshop",
+          "date": "2026-10-04",
+          "time": "15:00–18:00",
+          "title": "Heels choreo",
+          "level": "Open level",
+          "duration": "3 h",
+          "price": "€35",
+          "status": "open"
+        },
+        {
+          "type": "lesson",
+          "date": "2026-10-15",
+          "time": "19:00–20:00",
+          "title": "Foundations",
+          "level": "Beginner",
+          "duration": "60 min",
+          "price": "€22",
+          "status": "last"
+        }
+      ]
     }
   },
   "ru": {
@@ -840,7 +941,8 @@ const I18N = {
       "location": "Где",
       "faq": "Вопросы",
       "contact": "Контакты",
-      "book": "Записаться"
+      "book": "Записаться",
+      "dates": "Даты"
     },
     "hero": {
       "eyebrow": "Heels dance · Милан, Брера",
@@ -1180,6 +1282,46 @@ const I18N = {
       "alt05": "Ноги на каблуках во время проходки, на паркете зала",
       "alt06": "Крупный план позы, рука на бедре, лицо не видно",
       "alt08": "Абстрактная схема квартала Брера"
+    },
+    "dates": {
+      "eyebrow": "Ближайшие даты",
+      "headline": "Ближайшие даты.",
+      "intro": "Воркшопы и занятия бронируются по одной дате: выберите удобную и напишите мне. Записываться на курс не нужно.",
+      "note": "Даты для примера, они ещё не окончательные. Настоящее расписание появится сразу после подтверждения: напишите мне, и вы узнаете первой.",
+      "empty": "Сейчас открытых дат нет. Напишите мне в WhatsApp — я сообщу, как только появится следующая.",
+      "cta": "Забронировать эту дату",
+      "types": {
+        "workshop": "Воркшоп",
+        "lesson": "Занятие",
+        "private": "Индивидуально"
+      },
+      "status": {
+        "open": "Есть места",
+        "last": "Последние места",
+        "full": "Мест нет"
+      },
+      "examples": [
+        {
+          "type": "workshop",
+          "date": "2026-10-04",
+          "time": "15:00–18:00",
+          "title": "Heels choreo",
+          "level": "Open level",
+          "duration": "3 ч",
+          "price": "35 €",
+          "status": "open"
+        },
+        {
+          "type": "lesson",
+          "date": "2026-10-15",
+          "time": "19:00–20:00",
+          "title": "База",
+          "level": "Начинающие",
+          "duration": "60 мин",
+          "price": "22 €",
+          "status": "last"
+        }
+      ]
     }
   }
 };
@@ -1382,6 +1524,7 @@ const I18N = {
 
     renderSchedule(l);
     renderPricing(l);
+    renderDates(l);
     renderTestimonials(l);
     buildMarquees();
     if (!opts.silent) store.set('hd-lang', l);
@@ -1451,7 +1594,7 @@ const I18N = {
     $$('[data-example="schedule"]').forEach(el => { el.hidden = !!CONFIG.scheduleConfirmed; });
     $$('[data-example="pricing"]').forEach(el => { el.hidden = !!CONFIG.pricingConfirmed; });
     const orari = $('#orari'), prezzi = $('#prezzi');
-    if (orari) orari.hidden = !CONFIG.showTodos && !(CONFIG.scheduleConfirmed && Array.isArray(CONFIG.schedule) && CONFIG.schedule.length > 0);
+    if (orari) orari.hidden = CONFIG.showWeeklySchedule === false || (!CONFIG.showTodos && !(CONFIG.scheduleConfirmed && Array.isArray(CONFIG.schedule) && CONFIG.schedule.length > 0));
     if (prezzi) prezzi.hidden = !CONFIG.showTodos && !(CONFIG.pricingConfirmed && Array.isArray(CONFIG.pricing) && CONFIG.pricing.length > 0);
     /* testimonianze */
     const dicono = $('#dicono');
@@ -1555,6 +1698,74 @@ const I18N = {
     if (CONFIG.venue.venueAddress) school.address.streetAddress = CONFIG.venue.venueAddress;
     /* Nessun oggetto Course finché prezzi e orari non sono confermati: Google richiede offers, courseSchedule e courseWorkload. */
     el.textContent = JSON.stringify({ '@context': 'https://schema.org', '@graph': [person, school] });
+  }
+
+
+  /* ---------- prossime date (workshop e lezioni singole) ---------- */
+  function formatDate(iso, l) {
+    const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(String(iso || ''));
+    if (!m) return String(iso || '');
+    const d = new Date(Number(m[1]), Number(m[2]) - 1, Number(m[3]));
+    if (isNaN(d.getTime())) return String(iso);
+    const loc = { it: 'it-IT', en: 'en-GB', ru: 'ru-RU' }[l || lang] || 'it-IT';
+    try {
+      const s = d.toLocaleDateString(loc, { weekday: 'long', day: 'numeric', month: 'long' });
+      return s.charAt(0).toUpperCase() + s.slice(1);
+    } catch (e) { return m[3] + '/' + m[2] + '/' + m[1]; }
+  }
+  function isPast(iso) {
+    const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(String(iso || ''));
+    if (!m) return false;
+    const d = new Date(Number(m[1]), Number(m[2]) - 1, Number(m[3]));
+    const today = new Date(); today.setHours(0, 0, 0, 0);
+    return d < today;
+  }
+  function renderDates(l) {
+    const list = $('#dates-list'), section = $('#date');
+    if (!list || !section) return;
+    const confirmed = CONFIG.upcomingConfirmed === true && Array.isArray(CONFIG.upcoming) && CONFIG.upcoming.length > 0;
+    const src = confirmed
+      ? CONFIG.upcoming.filter(e => !isPast(e.date)).slice().sort((a, b) => String(a.date).localeCompare(String(b.date)))
+      : (get(I18N[l || lang], 'dates.examples') || []);
+    const isExample = !confirmed;
+    /* in produzione, senza date vere, la sezione resta ma dice che il calendario arriva su WhatsApp */
+    const showExamples = isExample && CONFIG.showTodos;
+    list.textContent = '';
+    if (!src.length || (isExample && !showExamples)) {
+      const p = doc.createElement('p');
+      p.className = 'dates__empty';
+      p.textContent = tClean('dates.empty', l);
+      list.appendChild(p);
+      $$('[data-example="upcoming"]').forEach(el => { el.hidden = true; });
+      return;
+    }
+    $$('[data-example="upcoming"]').forEach(el => { el.hidden = !isExample; });
+    src.forEach(e => {
+      const row = doc.createElement('article');
+      row.className = 'date' + (e.status === 'full' ? ' is-full' : '');
+      const type = tClean('dates.types.' + (e.type || 'workshop'), l) || '';
+      const status = e.status ? (tClean('dates.status.' + e.status, l) || '') : '';
+      const when = doc.createElement('div');
+      when.className = 'date__when';
+      when.innerHTML = '<p class="date__type">' + esc(type) + '</p><p class="date__day">' + esc(formatDate(e.date, l)) + '</p><p class="date__time">' + esc(e.time || '') + '</p>';
+      const what = doc.createElement('div');
+      what.className = 'date__what';
+      const meta = [e.level, e.duration, e.place || ''].filter(Boolean).map(esc).join(' · ');
+      what.innerHTML = '<h3 class="date__title">' + esc(e.title || type) + '</h3>' + (meta ? '<p class="date__meta">' + meta + '</p>' : '');
+      const side = doc.createElement('div');
+      side.className = 'date__side';
+      side.innerHTML = '<p class="date__price">' + esc(e.price || '') + '</p>' + (status ? '<p class="date__status">' + esc(status) + '</p>' : '');
+      const a = doc.createElement('a');
+      a.className = 'btn btn--secondary date__cta';
+      a.setAttribute('href', '#prenota');
+      a.setAttribute('data-config-href', 'whatsapp');
+      a.textContent = tClean('dates.cta', l);
+      if (e.status === 'full') { a.setAttribute('aria-disabled', 'true'); a.classList.add('is-off'); }
+      side.appendChild(a);
+      row.appendChild(when); row.appendChild(what); row.appendChild(side);
+      list.appendChild(row);
+    });
+    $$('[data-config-href="whatsapp"]', list).forEach(a => { a.setAttribute('href', whatsappHref(l)); setExternal(a, !!CONFIG.contacts.whatsappNumber); });
   }
 
   /* Numerazione delle sezioni visibili (eyebrow, numerale ghost, nav, menu). */

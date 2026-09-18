@@ -1647,3 +1647,31 @@ html:not(.js) .totop { opacity: 1; visibility: visible; transform: none; }
   .totop { right: 24px; bottom: 88px; }
 }
 @media (prefers-reduced-motion: reduce) { .cw__toggle { transition: none; } }
+
+/* ---------- Prossime date ---------- */
+.dates { display: flex; flex-direction: column; border-top: 1px solid var(--c-filetto, #CFC7B9); }
+.date {
+  display: grid; gap: 4px 24px; padding: 20px 0;
+  border-bottom: 1px solid var(--c-filetto, #CFC7B9);
+  grid-template-columns: 1fr;
+}
+.date.is-full { opacity: .6; }
+.date__type {
+  margin: 0 0 6px; font-size: .6875rem; letter-spacing: .12em; text-transform: uppercase; color: var(--c-minio);
+}
+.date__day { margin: 0; font-family: var(--ff-display, 'Bodoni Moda', serif); font-size: 1.25rem; line-height: 1.2; color: var(--c-antracite); }
+.date__time { margin: 2px 0 0; font-size: .875rem; color: var(--c-fumo); font-variant-numeric: tabular-nums; }
+.date__title { margin: 12px 0 0; font-size: 1.0625rem; font-weight: 600; color: var(--c-antracite); }
+.date__meta { margin: 4px 0 0; font-size: .875rem; color: var(--c-fumo); }
+.date__price { margin: 12px 0 0; font-family: var(--ff-display, 'Bodoni Moda', serif); font-size: 1.25rem; color: var(--c-antracite); font-variant-numeric: tabular-nums; }
+.date__status { margin: 2px 0 0; font-size: .75rem; letter-spacing: .08em; text-transform: uppercase; color: var(--c-fumo); }
+.date__cta { margin-top: 12px; }
+.date__cta.is-off { pointer-events: none; opacity: .5; }
+.dates__empty { margin: 24px 0 0; max-width: 46ch; color: var(--c-fumo); }
+@media (min-width: 768px) {
+  .date { grid-template-columns: minmax(150px, 1fr) 2fr auto; align-items: start; padding: 24px 0; }
+  .date__title { margin-top: 0; }
+  .date__price { margin-top: 0; text-align: right; }
+  .date__status { text-align: right; }
+  .date__side { display: flex; flex-direction: column; align-items: flex-end; }
+}

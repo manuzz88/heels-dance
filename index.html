@@ -75,7 +75,8 @@ if (/^https?:$/.test(location.protocol)) {
         <li><a class="nav__link" href="#lezioni"><span class="nav__n" aria-hidden="true" data-nav-n="lezioni">02</span><span data-i18n="nav.classes">Lezioni</span></a></li>
         <li><a class="nav__link" href="#prima-volta"><span class="nav__n" aria-hidden="true" data-nav-n="prima-volta">03</span><span data-i18n="nav.first_class">Prima volta</span></a></li>
         <li><a class="nav__link" href="#kristina"><span class="nav__n" aria-hidden="true" data-nav-n="kristina">04</span><span data-i18n="nav.about">Kristina</span></a></li>
-        <li><a class="nav__link" href="#orari"><span class="nav__n" aria-hidden="true" data-nav-n="orari">05</span><span data-i18n="nav.schedule">Orari</span></a></li>
+        <li><a class="nav__link" href="#date"><span class="nav__n" aria-hidden="true" data-nav-n="date">05</span><span data-i18n="nav.dates">Date</span></a></li>
+          <li><a class="nav__link" href="#orari"><span class="nav__n" aria-hidden="true" data-nav-n="orari">05</span><span data-i18n="nav.schedule">Orari</span></a></li>
         <li><a class="nav__link" href="#prezzi"><span class="nav__n" aria-hidden="true" data-nav-n="prezzi">06</span><span data-i18n="nav.pricing">Prezzi</span></a></li>
         <li><a class="nav__link" href="#dove"><span class="nav__n" aria-hidden="true" data-nav-n="dove">07</span><span data-i18n="nav.location">Dove</span></a></li>
         <li><a class="nav__link" href="#domande"><span class="nav__n" aria-hidden="true" data-nav-n="domande">08</span><span data-i18n="nav.faq">Domande</span></a></li>
@@ -410,7 +411,27 @@ if (/^https?:$/.test(location.protocol)) {
     </div>
   </section>
 
-  <!-- ================= 05 · ORARI ================= -->
+    <!-- ================= 05 · PROSSIME DATE ================= -->
+  <section id="date" class="section section--dates" data-numbered aria-labelledby="date-title">
+    <div class="container">
+      <span class="numeral" aria-hidden="true" data-count="05">05</span>
+      <div class="grid">
+        <div class="section__head reveal">
+          <p class="eyebrow"><span class="eyebrow__n">05</span><span class="eyebrow__sep">—</span><span data-i18n="dates.eyebrow">Prossime date</span></p>
+          <h2 class="h2" id="date-title" data-i18n="dates.headline" data-em>Le prossime <em>date.</em></h2>
+          <span class="badge" data-i18n="ui.example_badge" data-example="upcoming">Esempio, non definitivo</span>
+        </div>
+        <div class="dates reveal" id="dates-list"></div>
+        <aside class="section__aside reveal">
+          <p class="small" data-i18n="dates.intro">Workshop e lezioni si prenotano a data singola: scegli quella che ti va bene e scrivimi. Non serve iscriversi a un corso.</p>
+          <p class="small" data-i18n="dates.note" data-example="upcoming">Date di esempio, non ancora definitive.</p>
+          <a class="btn btn--ghost" href="#prenota"><span data-i18n="nav.book">Prenota</span><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+<!-- ================= 05 · ORARI ================= -->
   <section id="orari" class="section section--table" data-numbered aria-labelledby="orari-title">
     <div class="container">
       <span class="numeral" aria-hidden="true" data-count="05">05</span>

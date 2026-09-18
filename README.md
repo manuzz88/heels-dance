@@ -54,6 +54,32 @@ docs/
 - Una sola URL: i motori di ricerca indicizzano l'italiano (contenuto statico dell'HTML). Se in futuro
   servirà posizionamento in EN/RU: pagine separate `/en/`, `/ru/` con `hreflang` (non in questa versione).
 
+## Prossime date (workshop e lezioni singole)
+
+La sezione «Prossime date» è quella da tenere aggiornata: si compila in `CONFIG.upcoming`,
+una riga per data. Esempio:
+
+```js
+upcomingConfirmed: true,
+upcoming: [
+  { type: 'workshop', date: '2026-11-08', time: '16:00–19:00',
+    title: 'Heels choreo · Rihanna', level: 'Open level',
+    duration: '3 h', price: '35 €', status: 'open' }
+]
+```
+
+Comportamento automatico:
+
+- Le date passate spariscono da sole, non serve cancellarle.
+- Con l'elenco vuoto la sezione mostra «scrivimi e ti avviso appena esce la prossima data».
+- Finché `upcomingConfirmed` è `false` compaiono due date di esempio con il badge «Esempio»
+  (solo in sviluppo, cioè con `showTodos: true`).
+- Il giorno della settimana viene scritto da solo, tradotto nelle tre lingue.
+- `showWeeklySchedule: false` toglie del tutto la sezione «Orari», se per ora si lavora
+  solo con workshop e lezioni singole.
+
+Domande aperte da porre a Kristina: `docs/DA-CHIEDERE-A-KRISTINA.md`.
+
 ## Immagini (stato attuale)
 
 Tutte le immagini del sito sono **fotografie vere**: il ritratto nella sezione «Chi insegna»

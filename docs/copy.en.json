@@ -14,7 +14,8 @@
     "location": "Where",
     "faq": "FAQ",
     "contact": "Contact",
-    "book": "Book"
+    "book": "Book",
+    "dates": "Dates"
   },
   "hero": {
     "eyebrow": "Heels dance · Milan, Brera",
@@ -354,5 +355,45 @@
     "alt05": "Legs in heels during the walk, on the studio floor",
     "alt06": "Close-up of the pose, hand on the hip, face not visible",
     "alt08": "Abstract map of the Brera district"
+  },
+  "dates": {
+    "eyebrow": "Upcoming dates",
+    "headline": "Upcoming dates.",
+    "intro": "Workshops and classes are booked one date at a time: pick the one that works for you and write to me. No course sign-up needed.",
+    "note": "Sample dates, not final yet. The real calendar comes as soon as it is confirmed: write to me and you will be the first to know.",
+    "empty": "No open date at the moment. Write to me on WhatsApp and I will let you know as soon as the next one is out.",
+    "cta": "Book this date",
+    "types": {
+      "workshop": "Workshop",
+      "lesson": "Class",
+      "private": "Private"
+    },
+    "status": {
+      "open": "Places available",
+      "last": "Last places",
+      "full": "Sold out"
+    },
+    "examples": [
+      {
+        "type": "workshop",
+        "date": "2026-10-04",
+        "time": "15:00–18:00",
+        "title": "Heels choreo",
+        "level": "Open level",
+        "duration": "3 h",
+        "price": "€35",
+        "status": "open"
+      },
+      {
+        "type": "lesson",
+        "date": "2026-10-15",
+        "time": "19:00–20:00",
+        "title": "Foundations",
+        "level": "Beginner",
+        "duration": "60 min",
+        "price": "€22",
+        "status": "last"
+      }
+    ]
   }
 }
