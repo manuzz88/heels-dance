@@ -1607,8 +1607,8 @@ html:not(.js) .totop { opacity: 1; visibility: visible; transform: none; }
 .frame.has-media { box-shadow: 0 1px 0 rgba(30, 28, 26, .06); }
 
 /* La cornice dell'hero segue la proporzione della foto (2:3): la figura intera, tacchi compresi */
-.hero__frame[data-ratio="2/3"] { aspect-ratio: 2 / 3; }
-.frame[data-ratio="2/3"] { aspect-ratio: 2 / 3; }
+.hero__frame[data-ratio="5/8"] { aspect-ratio: 5 / 8; }
+.frame[data-ratio="5/8"] { aspect-ratio: 5 / 8; }
 
 /* ---------- Widget di contatto (WhatsApp / Telegram) ---------- */
 .cw { position: fixed; right: 16px; bottom: 16px; z-index: 46; display: flex; flex-direction: column; align-items: flex-end; gap: 10px; }
