@@ -24,6 +24,15 @@ docs/
   genera-script.js     (facoltativo) re-incorpora i JSON in script.js dopo una modifica ai testi
 ```
 
+## Per Kristina
+
+Guida completa per scaricare il progetto, modificarlo e ripubblicarlo, senza saper programmare:
+
+- Italiano: `docs/GUIDA-KRISTINA.md`
+- Русский: `docs/GUIDA-KRISTINA-RU.md`
+
+Domande ancora aperte: `docs/DA-CHIEDERE-A-KRISTINA.md`.
+
 ## Come personalizzare (5 minuti)
 
 1. Apri `script.js`: il blocco `CONFIG` in cima è l'unico posto da modificare. Ogni campo è commentato:
