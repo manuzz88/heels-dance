@@ -26,8 +26,17 @@ docs/
 
 ## Richieste via Telegram (il ponte)
 
-Kristina scrive al bot `@Kristina_sito_bot`, Gemini propone la modifica, Manuel approva con un
-tocco dal telefono, il sito si pubblica. Il sito vero non viene mai toccato prima dell'approvazione.
+Kristina scrive al bot `@Kristina_sito_bot`, Gemini fa la modifica, i controlli automatici la
+verificano e il sito si pubblica da solo. L'anteprima arriva a chi ha fatto la richiesta.
+Manuel riceve un messaggio solo quando qualcosa non funziona.
+
+Per tornare all'approvazione con un tocco (Manuel riceve screenshot e due pulsanti, e niente
+viene pubblicato senza il suo assenso):
+
+```
+touch ~/.config/heels-bot/chiedi-approvazione   # attiva l'approvazione
+rm ~/.config/heels-bot/chiedi-approvazione      # torna alla pubblicazione diretta
+```
 
 Come funziona un giro:
 
@@ -36,9 +45,8 @@ Come funziona un giro:
 3. La modifica viene applicata e **verificata**: JSON validi, JavaScript valido, nessun errore in
    pagina, nessuno sbordamento a 390, 768 e 1440 pixel, nelle tre lingue. Se qualcosa non regge,
    tutto viene annullato e Manuel riceve il motivo.
-4. Manuel riceve su Telegram lo screenshot della pagina modificata e due pulsanti.
-5. Con «Pubblica» parte il commit e il sito si aggiorna; Kristina riceve la risposta nella sua lingua.
-   Con «Annulla» il progetto torna com'era.
+4. Se i controlli passano, parte il commit e il sito si aggiorna in un paio di minuti.
+5. Chi ha scritto riceve l'anteprima e la conferma nella propria lingua, con il link al sito.
 
 Comandi:
 

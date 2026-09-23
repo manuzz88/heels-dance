@@ -1,6 +1,10 @@
 #!/usr/bin/env python3
-"""Ponte fra Telegram e il sito: Kristina scrive, Gemini propone la modifica,
-Manuel approva con un tocco, il sito si pubblica.
+"""Ponte fra Telegram e il sito: Kristina scrive, Gemini modifica, il sito si pubblica.
+
+Di serie pubblica da solo: i controlli automatici sono la rete di sicurezza e l'anteprima
+va a chi ha fatto la richiesta. Manuel riceve un messaggio solo quando qualcosa non funziona.
+Per tornare all'approvazione con un tocco basta creare il file:
+  touch ~/.config/heels-bot/chiedi-approvazione
 
 Comandi:
   python3 tools/bot.py --registra    registra chi scrive per primo come amministratore (Manuel)
@@ -21,6 +25,7 @@ TOKEN_F, GEMINI_F = CONF / 'token', CONF / 'gemini-key'
 OFFSET_F, ADMIN_F = CONF / 'offset', CONF / 'mio-chat-id'
 AUTH_F, PENDENTE_F = CONF / 'autorizzati.json', CONF / 'pendente.json'
 LOG_F = CONF / 'richieste.jsonl'
+APPROVA_F = CONF / 'chiedi-approvazione'   # se esiste, Manuel deve approvare; se manca, si pubblica da solo
 SHOT = PROGETTO / 'tools' / 'verifica.py'
 MODELLO = os.environ.get('HEELS_MODELLO', 'gemini-3.8-flash')
 
@@ -192,47 +197,80 @@ def verifica():
     return problemi, esito.get('anteprima')
 
 
+
+def pubblica(descrizione, richiesta, da):
+    """Registra e pubblica. Ritorna None se è andata, altrimenti il motivo."""
+    git('add', '-A')
+    subprocess.run(['git', '-C', str(PROGETTO), '-c', 'user.name=Manuel Lazzaro', 'commit', '-q', '-m',
+                    f'Richiesta di {da}: {descrizione[:120]}\n\nTesto della richiesta: {richiesta[:250]}'],
+                   capture_output=True)
+    r = subprocess.run(['git', '-C', str(PROGETTO), 'push', '-q', 'origin', 'main'], capture_output=True, text=True)
+    return None if r.returncode == 0 else (r.stderr or r.stdout)[-200:]
+
 def proponi(richiesta, chi, chat_id):
     if PENDENTE_F.exists():
-        tg('sendMessage', chat_id=chat_id, text='Ho già una proposta in attesa di approvazione. Arrivo subito dopo.')
+        tg('sendMessage', chat_id=chat_id, text='Sto ancora finendo la richiesta precedente. Riprova fra poco.')
         return
-    sporco = git('status', '--porcelain')
-    if sporco:
-        tg('sendMessage', chat_id=admin() or chat_id, text='Il progetto ha modifiche non pubblicate: non elaboro richieste finché non è pulito.')
+    if git('status', '--porcelain'):
+        tg('sendMessage', chat_id=admin() or chat_id,
+           text='Il progetto ha modifiche non pubblicate sul computer: non elaboro richieste finché non è pulito.')
         return
     esito, uso = chiedi_a_gemini(richiesta, chi)
-    if esito.get('dubbi') and not esito.get('modifiche'):
-        tg('sendMessage', chat_id=chat_id, text=esito['dubbi'])
+    modifiche = esito.get('modifiche') or []
+    if not modifiche:
+        # nessuna modifica: è una domanda, un saluto o una richiesta poco chiara
+        tg('sendMessage', chat_id=chat_id,
+           text=esito.get('dubbi') or esito.get('risposta_a_kristina') or 'Non ho capito cosa cambiare. Me lo riscrivi?')
         return
     try:
-        toccati = applica(esito['modifiche'], esito.get('rigenera'))
+        toccati = applica(modifiche, esito.get('rigenera'))
     except Exception as e:
-        git('checkout', '--', '.')
-        tg('sendMessage', chat_id=admin() or chat_id, text=f'Non sono riuscito ad applicare la modifica: {e}')
+        git('checkout', '--', '.', check=False)
+        tg('sendMessage', chat_id=chat_id, text='Non sono riuscito a fare questa modifica. Provi a dirmelo in un altro modo?')
+        tg('sendMessage', chat_id=admin() or chat_id, text=f'[tecnico] modifica non applicata · {chi}: {richiesta[:120]}\n{e}')
         return
     problemi, anteprima = verifica()
     if problemi:
-        git('checkout', '--', '.')
+        git('checkout', '--', '.', check=False)
+        tg('sendMessage', chat_id=chat_id,
+           text='Ho provato ma il sito non reggeva, quindi ho annullato tutto. Il sito è rimasto com\'era.')
         tg('sendMessage', chat_id=admin() or chat_id,
-           text='Modifica scartata, il sito non reggeva:\n· ' + '\n· '.join(problemi[:4]))
+           text='[tecnico] modifica scartata dai controlli:\n· ' + '\n· '.join(problemi[:4]))
         return
-    pid = str(int(time.time()))
-    PENDENTE_F.write_text(json.dumps({
-        'id': pid, 'richiesta': richiesta, 'da': chi, 'chat_id': chat_id,
-        'spiegazione': esito.get('spiegazione', ''), 'risposta': esito.get('risposta_a_kristina', ''),
-        'file': toccati, 'token': uso.get('totalTokenCount'),
-    }, ensure_ascii=False), encoding='utf-8')
-    tastiera = {'inline_keyboard': [[{'text': '✅ Pubblica', 'callback_data': f'ok:{pid}'},
-                                     {'text': '❌ Annulla', 'callback_data': f'no:{pid}'}]]}
-    didascalia = (f'<b>Richiesta di {chi}</b>\n<i>{richiesta[:300]}</i>\n\n'
-                  f'{esito.get("spiegazione","")}\n\nFile toccati: {", ".join(toccati)}')
+
+    didascalia = f'<b>{esito.get("spiegazione","")}</b>\nFile toccati: {", ".join(toccati)}'
     if esito.get('dubbi'):
         didascalia += f'\n\nDubbio: {esito["dubbi"]}'
-    dest = admin() or chat_id
+
+    if APPROVA_F.exists():
+        pid = str(int(time.time()))
+        PENDENTE_F.write_text(json.dumps({
+            'id': pid, 'richiesta': richiesta, 'da': chi, 'chat_id': chat_id,
+            'spiegazione': esito.get('spiegazione', ''), 'risposta': esito.get('risposta_a_kristina', ''),
+            'file': toccati, 'token': uso.get('totalTokenCount')}, ensure_ascii=False), encoding='utf-8')
+        tastiera = {'inline_keyboard': [[{'text': '✅ Pubblica', 'callback_data': f'ok:{pid}'},
+                                         {'text': '❌ Annulla', 'callback_data': f'no:{pid}'}]]}
+        testo = f'<b>Richiesta di {chi}</b>\n<i>{richiesta[:300]}</i>\n\n' + didascalia
+        dest = admin() or chat_id
+        if anteprima and pathlib.Path(anteprima).exists():
+            tg_foto(dest, anteprima, testo, tastiera)
+        else:
+            tg('sendMessage', chat_id=dest, text=testo, parse_mode='HTML', reply_markup=tastiera)
+        return
+
+    # pubblicazione diretta: l'anteprima va a chi ha chiesto, non a Manuel
+    errore = pubblica(esito.get('spiegazione', ''), richiesta, chi)
+    if errore:
+        git('checkout', '--', '.', check=False)
+        tg('sendMessage', chat_id=chat_id, text='Non sono riuscito a mettere online la modifica.')
+        tg('sendMessage', chat_id=admin() or chat_id, text=f'[tecnico] pubblicazione fallita: {errore}')
+        return
+    risposta = esito.get('risposta_a_kristina') or esito.get('spiegazione') or 'Fatto.'
+    risposta += '\n\nhttps://manuzz88.github.io/heels-dance/'
     if anteprima and pathlib.Path(anteprima).exists():
-        tg_foto(dest, anteprima, didascalia, tastiera)
+        tg_foto(chat_id, anteprima, risposta)
     else:
-        tg('sendMessage', chat_id=dest, text=didascalia, parse_mode='HTML', reply_markup=tastiera)
+        tg('sendMessage', chat_id=chat_id, text=risposta)
 
 
 def decidi(pid, ok, chat_id, message_id):
