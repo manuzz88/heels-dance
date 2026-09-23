@@ -42,6 +42,13 @@ non si sceglie quale pubblicare.
 Per creare il bot: su Telegram si scrive a `@BotFather`, comando `/newbot`, si sceglie un nome
 e si copia il token che risponde.
 
+**Raccoglitore automatico.** Telegram conserva i messaggi non letti solo per 24 ore. Per non
+perderne nessuno, `bash tools/attiva-raccoglitore.sh` installa un controllo orario che archivia
+tutto in `~/.config/heels-bot/richieste.jsonl`, salva le foto e inoltra i messaggi a Manuel.
+È uno script normale: non usa Claude e non consuma crediti. Per farsi inoltrare i messaggi
+serve il proprio identificativo Telegram in `~/.config/heels-bot/mio-chat-id` (lo si ottiene
+scrivendo una volta al bot e leggendo `chat` con `python3 tools/leggi-richieste.py`).
+
 ## Per Kristina
 
 Guida completa per scaricare il progetto, modificarlo e ripubblicarlo, senza saper programmare:
