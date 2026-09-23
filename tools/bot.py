@@ -25,6 +25,8 @@ TOKEN_F, GEMINI_F = CONF / 'token', CONF / 'gemini-key'
 OFFSET_F, ADMIN_F = CONF / 'offset', CONF / 'mio-chat-id'
 AUTH_F, PENDENTE_F = CONF / 'autorizzati.json', CONF / 'pendente.json'
 LOG_F = CONF / 'richieste.jsonl'
+BUSSANO_F = CONF / 'in-attesa.json'      # chi ha scritto senza essere autorizzato
+FOTO_DIR = PROGETTO / 'assets' / 'img' / 'ricevute'
 APPROVA_F = CONF / 'chiedi-approvazione'   # se esiste, Manuel deve approvare; se manca, si pubblica da solo
 SHOT = PROGETTO / 'tools' / 'verifica.py'
 MODELLO = os.environ.get('HEELS_MODELLO', 'gemini-3.8-flash')
@@ -104,6 +106,15 @@ def tg_foto(chat_id, percorso, didascalia, tastiera=None):
     except urllib.error.HTTPError as e:
         print('sendPhoto:', e.read()[:200], file=sys.stderr)
         return False
+
+def salva_foto(file_id, nome):
+    token = leggi(TOKEN_F)
+    with urllib.request.urlopen(f'https://api.telegram.org/bot{token}/getFile?file_id={file_id}', timeout=60) as r:
+        info = json.load(r)['result']
+    FOTO_DIR.mkdir(parents=True, exist_ok=True)
+    dest = FOTO_DIR / (nome + pathlib.Path(info['file_path']).suffix)
+    urllib.request.urlretrieve(f"https://api.telegram.org/file/bot{token}/{info['file_path']}", dest)
+    return dest
 
 def git(*args, check=True):
     r = subprocess.run(['git', '-C', str(PROGETTO), *args], capture_output=True, text=True)
@@ -319,7 +330,22 @@ def ciclo(registra=False):
             decidi(pid, azione == 'ok', cq['message']['chat']['id'], cq['message']['message_id'])
             continue
         m = u.get('message')
-        if not m or not m.get('text'):
+        if not m:
+            continue
+        if m.get('photo') and str(m['chat']['id']) in auth:
+            best = max(m['photo'], key=lambda x: x.get('file_size', 0))
+            try:
+                dove = salva_foto(best['file_id'], f"tg-{m['message_id']}")
+                tg('sendMessage', chat_id=m['chat']['id'],
+                   text='Foto ricevuta. Dimmi dove va e la metto sul sito.')
+                if capo:
+                    tg('sendMessage', chat_id=capo, text=f'[foto] {m["from"].get("first_name")} ha mandato una foto: {dove}')
+            except Exception as e:
+                tg('sendMessage', chat_id=m['chat']['id'], text='Non sono riuscito a scaricare la foto.')
+                if capo:
+                    tg('sendMessage', chat_id=capo, text=f'[tecnico] foto non scaricata: {e}')
+            continue
+        if not m.get('text'):
             continue
         chat_id, nome = m['chat']['id'], m['from'].get('first_name', '?')
         if registra and not capo:
@@ -330,7 +356,18 @@ def ciclo(registra=False):
             capo = str(chat_id)
             continue
         if str(chat_id) not in auth:
-            tg('sendMessage', chat_id=chat_id, text='Questo bot è privato.')
+            try:
+                attesa = json.loads(BUSSANO_F.read_text(encoding='utf-8'))
+            except Exception:
+                attesa = {}
+            if str(chat_id) not in attesa:
+                attesa[str(chat_id)] = nome
+                BUSSANO_F.write_text(json.dumps(attesa, ensure_ascii=False), encoding='utf-8')
+                if capo:
+                    tg('sendMessage', chat_id=capo,
+                       text=f'{nome} ha scritto al bot ma non è autorizzata.\nPer autorizzarla:\n'
+                            f'python3 tools/bot.py --autorizza {chat_id} {nome}')
+            tg('sendMessage', chat_id=chat_id, text='Ciao! Devo ancora essere autorizzato a risponderti. Un attimo di pazienza.')
             continue
         with LOG_F.open('a', encoding='utf-8') as f:
             f.write(json.dumps({'data': m.get('date'), 'da': nome, 'chat_id': chat_id, 'testo': m['text']}, ensure_ascii=False) + '\n')
