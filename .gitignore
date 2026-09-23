@@ -7,3 +7,4 @@ node_modules/
 # segreti e file ricevuti dal bot
 assets/img/ricevute/
 *.token
+__pycache__/

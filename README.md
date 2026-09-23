@@ -24,30 +24,39 @@ docs/
   genera-script.js     (facoltativo) re-incorpora i JSON in script.js dopo una modifica ai testi
 ```
 
-## Richieste via Telegram
+## Richieste via Telegram (il ponte)
 
-Kristina manda le sue richieste a un bot Telegram, comprese le fotografie. I messaggi si leggono
-con:
+Kristina scrive al bot `@Kristina_sito_bot`, Gemini propone la modifica, Manuel approva con un
+tocco dal telefono, il sito si pubblica. Il sito vero non viene mai toccato prima dell'approvazione.
+
+Come funziona un giro:
+
+1. Arriva la richiesta, in qualsiasi lingua.
+2. `gemini-3.8-flash` legge il progetto e propone la modifica in formato preciso.
+3. La modifica viene applicata e **verificata**: JSON validi, JavaScript valido, nessun errore in
+   pagina, nessuno sbordamento a 390, 768 e 1440 pixel, nelle tre lingue. Se qualcosa non regge,
+   tutto viene annullato e Manuel riceve il motivo.
+4. Manuel riceve su Telegram lo screenshot della pagina modificata e due pulsanti.
+5. Con «Pubblica» parte il commit e il sito si aggiorna; Kristina riceve la risposta nella sua lingua.
+   Con «Annulla» il progetto torna com'era.
+
+Comandi:
 
 ```
-python3 tools/leggi-richieste.py            # solo i messaggi nuovi
-python3 tools/leggi-richieste.py --scarica  # salva anche le foto ricevute
-python3 tools/leggi-richieste.py --rispondi <chat_id> "fatto, guarda il sito"
+python3 tools/bot.py --registra     # da lanciare dopo aver scritto al bot: registra l'amministratore
+python3 tools/bot.py --ciclo        # un giro completo (è quello che gira ogni 5 minuti)
+python3 tools/bot.py --autorizza <chat_id> Kristina
+python3 tools/bot.py --stato        # chi è autorizzato e cosa c'è in sospeso
+python3 tools/bot.py --annulla      # scarta la proposta in sospeso
+bash tools/attiva-bot.sh            # installa il controllo automatico ogni 5 minuti
 ```
 
-Il token del bot sta in `~/.config/heels-bot/token`, fuori dal progetto: non finisce mai
-su GitHub. Le foto ricevute vanno in `assets/img/ricevute/`, cartella ignorata da git finché
-non si sceglie quale pubblicare.
+Segreti, tutti fuori dal progetto in `~/.config/heels-bot/`: `token` (bot Telegram),
+`gemini-key` (chiave dedicata, separata da quella di Renderium), `mio-chat-id`,
+`autorizzati.json`. Il bot accetta ordini solo dalle persone autorizzate.
 
-Per creare il bot: su Telegram si scrive a `@BotFather`, comando `/newbot`, si sceglie un nome
-e si copia il token che risponde.
-
-**Raccoglitore automatico.** Telegram conserva i messaggi non letti solo per 24 ore. Per non
-perderne nessuno, `bash tools/attiva-raccoglitore.sh` installa un controllo orario che archivia
-tutto in `~/.config/heels-bot/richieste.jsonl`, salva le foto e inoltra i messaggi a Manuel.
-È uno script normale: non usa Claude e non consuma crediti. Per farsi inoltrare i messaggi
-serve il proprio identificativo Telegram in `~/.config/heels-bot/mio-chat-id` (lo si ottiene
-scrivendo una volta al bot e leggendo `chat` con `python3 tools/leggi-richieste.py`).
+Costo indicativo: circa 75.000 gettoni per richiesta, qualche centesimo. Il modello si cambia
+con la variabile d'ambiente `HEELS_MODELLO`.
 
 ## Per Kristina
 
