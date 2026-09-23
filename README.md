@@ -24,6 +24,24 @@ docs/
   genera-script.js     (facoltativo) re-incorpora i JSON in script.js dopo una modifica ai testi
 ```
 
+## Richieste via Telegram
+
+Kristina manda le sue richieste a un bot Telegram, comprese le fotografie. I messaggi si leggono
+con:
+
+```
+python3 tools/leggi-richieste.py            # solo i messaggi nuovi
+python3 tools/leggi-richieste.py --scarica  # salva anche le foto ricevute
+python3 tools/leggi-richieste.py --rispondi <chat_id> "fatto, guarda il sito"
+```
+
+Il token del bot sta in `~/.config/heels-bot/token`, fuori dal progetto: non finisce mai
+su GitHub. Le foto ricevute vanno in `assets/img/ricevute/`, cartella ignorata da git finché
+non si sceglie quale pubblicare.
+
+Per creare il bot: su Telegram si scrive a `@BotFather`, comando `/newbot`, si sceglie un nome
+e si copia il token che risponde.
+
 ## Per Kristina
 
 Guida completa per scaricare il progetto, modificarlo e ripubblicarlo, senza saper programmare:

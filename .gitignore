@@ -3,3 +3,7 @@ Thumbs.db
 *.log
 node_modules/
 .netlify/
+
+# segreti e file ricevuti dal bot
+assets/img/ricevute/
+*.token
