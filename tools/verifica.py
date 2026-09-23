@@ -1,6 +1,10 @@
 #!/usr/bin/env python3
 """Controlla che il sito regga e prepara un'anteprima da mandare su Telegram.
 
+Uso: python3 tools/verifica.py [ancora]
+Se viene passata un'ancora (per esempio "#prezzi" o ".hero__frame"), l'anteprima inquadra
+quella parte della pagina invece della pagina intera.
+
 Stampa un JSON: {"problemi": [...], "anteprima": "<percorso jpg>"}
 Controlla, nelle tre lingue: errori in console, sbordamenti orizzontali a 390/768/1440,
 caratteri caricati, e che non compaiano testi non tradotti.
@@ -10,7 +14,7 @@ import asyncio, json, pathlib, sys, tempfile
 PROGETTO = pathlib.Path(__file__).resolve().parent.parent
 USCITA = pathlib.Path(tempfile.gettempdir()) / 'heels-verifica'
 
-async def controlla():
+async def controlla(ancora=None):
     from playwright.async_api import async_playwright
     USCITA.mkdir(parents=True, exist_ok=True)
     problemi, anteprima = [], None
@@ -45,7 +49,19 @@ async def controlla():
                     if vuote:
                         problemi.append(f'{vuote} testi sono rimasti vuoti')
                     png = USCITA / 'anteprima.png'
-                    await pg.screenshot(path=str(png), full_page=True)
+                    mirata = False
+                    if ancora:
+                        try:
+                            el = await pg.query_selector(ancora)
+                            if el:
+                                await el.scroll_into_view_if_needed()
+                                await pg.wait_for_timeout(700)
+                                await pg.screenshot(path=str(png))   # solo la schermata visibile
+                                mirata = True
+                        except Exception:
+                            pass
+                    if not mirata:
+                        await pg.screenshot(path=str(png), full_page=True)
                     anteprima = comprimi(png)
                 await ctx.close()
         await b.close()
@@ -67,8 +83,9 @@ def comprimi(png):
     return str(jpg)
 
 def main():
+    ancora = sys.argv[1] if len(sys.argv) > 1 else None
     try:
-        problemi, anteprima = asyncio.run(controlla())
+        problemi, anteprima = asyncio.run(controlla(ancora))
     except Exception as e:
         problemi, anteprima = [f'controllo non riuscito: {str(e)[:200]}'], None
     print(json.dumps({'problemi': problemi, 'anteprima': anteprima}, ensure_ascii=False))

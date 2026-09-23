@@ -62,6 +62,7 @@ Rispondi SOLO con questo JSON:
  "spiegazione": "<una frase in italiano, per Manuel>",
  "risposta_a_kristina": "<una frase nella lingua della richiesta>",
  "rigenera": <true se hai toccato docs/copy.*.json, altrimenti false>,
+ "ancora": "<selettore CSS della parte di pagina toccata, per l'anteprima: per esempio \"#prezzi\", \"#date\", \"#kristina\", \".hero\". Stringa vuota se la modifica riguarda tutto il sito>",
  "dubbi": "<domanda da fare, stringa vuota se non serve>"}"""
 
 
@@ -185,7 +186,7 @@ def applica(modifiche, rigenera):
         toccati.append('script.js')
     return toccati
 
-def verifica():
+def verifica(ancora=None):
     """Controlla che il sito regga: JSON validi, JavaScript valido, niente errori né sbordamenti."""
     problemi = []
     for rel in ('docs/copy.it.json', 'docs/copy.en.json', 'docs/copy.ru.json'):
@@ -199,7 +200,8 @@ def verifica():
         problemi.append('script.js contiene un errore: ' + r.stderr.strip().splitlines()[-1][:160])
     if problemi:
         return problemi, None
-    r = subprocess.run([sys.executable, str(SHOT)], cwd=PROGETTO, capture_output=True, text=True, timeout=420)
+    cmd = [sys.executable, str(SHOT)] + ([ancora] if ancora else [])
+    r = subprocess.run(cmd, cwd=PROGETTO, capture_output=True, text=True, timeout=420)
     try:
         esito = json.loads(r.stdout[r.stdout.index('{'):])
     except Exception:
@@ -240,7 +242,7 @@ def proponi(richiesta, chi, chat_id):
         tg('sendMessage', chat_id=chat_id, text='Non sono riuscito a fare questa modifica. Provi a dirmelo in un altro modo?')
         tg('sendMessage', chat_id=admin() or chat_id, text=f'[tecnico] modifica non applicata · {chi}: {richiesta[:120]}\n{e}')
         return
-    problemi, anteprima = verifica()
+    problemi, anteprima = verifica(esito.get('ancora') or None)
     if problemi:
         git('checkout', '--', '.', check=False)
         tg('sendMessage', chat_id=chat_id,
